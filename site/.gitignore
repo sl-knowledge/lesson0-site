@@ -6,6 +6,9 @@ docs/index.md
 docs/student/
 docs/teacher/
 
+# 由 tools/hooks.py 从仓库根目录的 LICENSE 同步
+docs/assets/downloads/LICENSE.txt
+
 # Python
 __pycache__/
 *.pyc

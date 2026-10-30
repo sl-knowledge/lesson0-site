@@ -1,0 +1,80 @@
+第零课 · 同一个声音，可以怎么写？
+Copyright (c) 2026 SL
+
+本仓库同时包含课程内容与构建代码，二者适用不同的许可协议。
+下文「一、课程内容」「二、源代码与样式」「三、保留所有权利」三部分构成本仓库的许可声明。
+
+════════════════════════════════════════════════════════════════════
+一、课程内容 —— CC BY-NC-SA 4.0（署名－非商业性使用－相同方式共享）
+════════════════════════════════════════════════════════════════════
+
+适用范围：
+  · site/content/home.yaml、site/content/student.yaml —— 学生讲义文案与教学设计
+  · site/docs/assets/downloads/lesson0-student-handout-v1.pdf —— 学生讲义原件
+  · 站点文案、版面结构与视觉设计
+
+许可全文（法律文本，以英文为准）：
+  https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+摘要（便于阅读）：
+  https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+你可以：
+  · 分享 —— 复制、转发、印刷分发
+  · 改编 —— 改写、翻译、做成自己的课件
+  · 用于非商业目的
+
+你需要：
+  · 署名 —— 注明作者 SL，并注明来源链接
+  · 标注改动 —— 说明你做过哪些修改
+  · 相同方式共享 —— 改编后的材料必须以 CC BY-NC-SA 4.0 发布
+
+你不可以：
+  · 用于商业目的
+  · 附加额外限制，或暗示作者对你的使用方式背书
+
+════════════════════════════════════════════════════════════════════
+二、源代码与样式 —— MIT License
+════════════════════════════════════════════════════════════════════
+
+适用范围：
+  · site/tools/*.py —— YAML → Markdown 生成器、构建钩子、链接自检
+  · site/docs/assets/stylesheets/extra.css —— 唯一的自定义样式表
+  · site/mkdocs.yml、site/requirements.txt、.github/workflows/ —— 构建与发布配置
+
+MIT License
+
+Copyright (c) 2026 SL
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+════════════════════════════════════════════════════════════════════
+三、保留所有权利
+════════════════════════════════════════════════════════════════════
+
+以下部分不在上述授权之内，保留全部权利，仅供课程教师本人教学使用：
+
+  · site/content/teacher.yaml 及由它生成的教师区页面（teacher/guide/）
+  · 日语/ 目录下的原始教师稿
+
+说明：站点是纯静态页面，没有访问控制，上述内容在技术上仍可被任何拿到链接的人打开。
+请勿向学生投屏教师区页面，也不要分发该链接。
+
+════════════════════════════════════════════════════════════════════
+联系方式：SL <hiteck2019@hotmail.com>
+════════════════════════════════════════════════════════════════════

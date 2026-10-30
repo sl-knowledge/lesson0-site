@@ -45,5 +45,18 @@ blocks:
     title: 纯静态 · 可离线 · 可打印
     text: |
       内容真源是 YAML，构建产物是静态 HTML/CSS。除 Material 主题自带的搜索与翻页外，没有任何自写 JavaScript；没有统计脚本，没有 Cookie，也不向外部站点发起请求。每一页都按 A4 讲义排版，浏览器直接打印即可分发。
+
+  - type: heading
+    level: 2
+    text: 作者与许可
+  - type: list
+    items:
+      - "**作者：** SL"
+      - "**课程内容**（学生讲义、文案与版面设计）：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) —— 可分享、可改编，需署名、非商用，衍生作品须以同一协议发布"
+      - "**构建代码与样式**（site/tools/、extra.css、mkdocs.yml）：MIT"
+      - "**教师区**（教师引导与问题生成支架）：保留所有权利，不在上述授权之内"
+  - type: buttons
+    items:
+      - {text: 许可协议全文, to: assets/downloads/LICENSE.txt, asset: true}
   - type: foot
-    text: 第零课 · 试教稿 v1 · MkDocs + Material 构建
+    text: 第零课 · 试教稿 v1 · 作者 SL · MkDocs + Material 构建

@@ -2,8 +2,8 @@
 # 构建：python -m mkdocs build --strict  →  _site/
 site_name: 第零课 · 同一个声音，可以怎么写？
 site_description: 中文母语者学习日语 · 第零课试教站点（学生版 6 页 + 教师引导支架）
-site_author: 日语课程试教
-copyright: 第零课 · 试教稿 v1
+site_author: SL
+copyright: © 2026 SL · 第零课 · 内容以 CC BY-NC-SA 4.0 授权
 
 docs_dir: docs
 site_dir: _site
@@ -13,6 +13,8 @@ theme:
   name: material
   language: zh
   font: false          # 不加载 Google 字体：站点零外部请求
+  repo_url: https://github.com/sl-knowledge/lesson0-site
+  repo_name: sl-knowledge/lesson0-site
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default

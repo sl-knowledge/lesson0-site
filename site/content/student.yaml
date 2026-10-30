@@ -42,12 +42,12 @@ overview:
     - type: download
       tone: amber
       title: 打印版
-      text: 同一份讲义另有可打印的 PDF（A4，六页）。浏览器里直接打印也可以，页面已按讲义排版。
+      text: 同一份讲义另有可打印的 PDF（A4，六页）。浏览器里直接打印也可以，页面已按讲义排版。作者 SL，内容以 CC BY-NC-SA 4.0 授权。
       to: assets/downloads/lesson0-student-handout-v1.pdf
       label: 下载学生版 PDF（A4 · 6 页）
     - type: hr
     - type: foot
-      text: 第零课 · 试教稿 v1 · 中文母语者学习日语
+      text: 第零课 · 试教稿 v1 · 中文母语者学习日语 · 作者 SL · 内容以 CC BY-NC-SA 4.0 授权
 
 pages:
   - id: p1

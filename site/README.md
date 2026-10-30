@@ -97,6 +97,21 @@ site/
 2. **教师区没有访问控制。** 站点是纯静态页面，任何知道 URL 的人都能打开 `teacher/guide/`。
    上课时请勿投屏该页，也不要把该链接发给学生；需要真正的权限隔离时，请在部署层加保护。
 
+## 作者与许可
+
+作者：**SL**（`SL <hiteck2019@hotmail.com>`）。
+
+| 部分 | 许可 | 范围 |
+|---|---|---|
+| 课程内容 | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) | 学生讲义文案与教学设计、讲义 PDF、站点文案与版面设计 |
+| 源代码与样式 | MIT | `site/tools/`、`extra.css`、`mkdocs.yml`、CI 工作流 |
+| 教师区 | 保留所有权利 | `site/content/teacher.yaml` 与 `日语/` 下的原始教师稿 |
+
+- CC BY-NC-SA 4.0：可分享、可改编，需署名 SL、说明改动、限于非商业用途，衍生作品须以同一协议发布。
+- 仓库根目录的 `LICENSE` 是唯一真源。构建时 `tools/hooks.py` 会把它同步到
+  `site/docs/assets/downloads/LICENSE.txt`（该副本不进版本库），站内公布的协议因此与仓库里的那份始终一致。
+- 教师区不在授权之列：站点是纯静态页面、没有访问控制，**请勿向学生投屏或分发该链接**。
+
 ## 打印
 
 每一页都按 A4 讲义排版，浏览器直接打印（Ctrl/Cmd + P）即可当作讲义分发；
