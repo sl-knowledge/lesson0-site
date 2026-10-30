@@ -72,6 +72,10 @@ extra_css:
 
 extra:
   generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/sl-knowledge/lesson0-site
+      name: sl-knowledge/lesson0-site
 
 not_in_nav: |
   assets/**
