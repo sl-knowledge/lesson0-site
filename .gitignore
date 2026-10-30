@@ -11,3 +11,6 @@ desktop.ini
 # Python
 __pycache__/
 *.pyc
+
+# 临时提交信息文件
+.git-commit-msg.txt
