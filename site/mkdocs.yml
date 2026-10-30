@@ -1,0 +1,88 @@
+# 第零课站点配置
+# 构建：python -m mkdocs build --strict  →  _site/
+site_name: 第零课 · 同一个声音，可以怎么写？
+site_description: 中文母语者学习日语 · 第零课试教站点（学生版 6 页 + 教师引导支架）
+site_author: 日语课程试教
+copyright: 第零课 · 试教稿 v1
+
+docs_dir: docs
+site_dir: _site
+use_directory_urls: true
+
+theme:
+  name: material
+  language: zh
+  font: false          # 不加载 Google 字体：站点零外部请求
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search:
+      lang: zh
+
+# 构建前把 content/*.yaml 渲染成 docs/*.md
+hooks:
+  - tools/hooks.py
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      permalink_title: 本节链接
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist
+  - footnotes
+  - def_list
+
+# 仅此一份自定义样式表：无自写 JavaScript、无统计脚本、无 Cookie
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra:
+  generator: false
+
+not_in_nav: |
+  assets/**
+
+nav:
+  - 首页: index.md
+  - 学生版:
+      - 概览与用法: student/index.md
+      - 第 1 页 · 先从你熟悉的中文开始: student/page-1.md
+      - 第 2 页 · 同一个读音，可能有两个意思吗？: student/page-2.md
+      - 第 3 页 · 日语真的采用了类似的办法吗？: student/page-3.md
+      - 第 4 页 · 再看两个词，和刚才一样吗？: student/page-4.md
+      - 第 5 页 · 一个词，可以有多少种模样？: student/page-5.md
+      - 第 6 页 · 最后，一个小小的自测: student/page-6.md
+  - 教师区（仅教师）:
+      - 教师引导与问题生成支架: teacher/guide.md

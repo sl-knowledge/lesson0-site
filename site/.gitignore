@@ -1,0 +1,11 @@
+# 构建产物
+_site/
+
+# 由 tools/build_content.py 从 content/*.yaml 生成
+docs/index.md
+docs/student/
+docs/teacher/
+
+# Python
+__pycache__/
+*.pyc

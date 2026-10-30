@@ -1,0 +1,946 @@
+/* 第零课站点样式
+ *
+ * 约定：只写 CSS，不写任何 JavaScript。
+ * 配色取自学生版讲义 PDF：墨绿 #164B42 / 平假名蓝 #236BAA / 片假名琥珀 #A86716。
+ */
+
+/* ------------------------------------------------------------------ *
+ * 1. 设计变量
+ * ------------------------------------------------------------------ */
+:root {
+  --l0-ink: #164b42;
+  --l0-ink-2: #233a36;
+  --l0-muted: #567b72;
+  --l0-blue: #236baa;
+  --l0-amber: #a86716;
+
+  --l0-surface: #f8fbf9;
+  --l0-surface-blue: #f2f8fb;
+  --l0-tint-green: #edf6f0;
+  --l0-tint-green-2: #e2f2eb;
+  --l0-tint-amber: #fff9ef;
+
+  --l0-line: #dbe8e2;
+  --l0-line-2: #e2ece7;
+  --l0-dash: #c7dad2;
+
+  /* 正文：拉丁字统一走 system-ui / Segoe UI，中文落到微软雅黑。
+     顺序即回退顺序——Segoe UI 没有汉字，汉字才会落到雅黑。 */
+  --l0-sans: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC",
+    "Noto Sans", sans-serif;
+
+  /* 例词：拉丁字同样走 Segoe UI（与正文同一张脸），
+     汉字假名落到日文黑体（游ゴシック / Noto Sans JP），日文字形与字号都对得上。
+     末尾务必是 sans-serif，绝不能让拉丁字掉进 Times。 */
+  --l0-jp: "Segoe UI", system-ui, "Yu Gothic UI", "Yu Gothic", "Hiragino Sans",
+    "Noto Sans JP", "Meiryo", "Microsoft YaHei UI", "Microsoft YaHei", "PingFang SC",
+    sans-serif;
+
+  --md-text-font-family: var(--l0-sans);
+  --md-code-font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #164b42;
+  --md-primary-fg-color--light: #2d8a77;
+  --md-primary-fg-color--dark: #0e342e;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #edf6f0;
+  --md-accent-fg-color: #2d8a77;
+  --md-accent-fg-color--transparent: rgba(45, 138, 119, 0.12);
+  --md-typeset-a-color: #236baa;
+}
+
+[data-md-color-scheme="slate"] {
+  --l0-ink: #74d3b7;
+  --l0-ink-2: #dbe7e3;
+  --l0-muted: #9ab5ae;
+  --l0-blue: #86b9ea;
+  --l0-amber: #e3aa5c;
+
+  --l0-surface: #1a2b27;
+  --l0-surface-blue: #16262f;
+  --l0-tint-green: #143029;
+  --l0-tint-green-2: #1d443c;
+  --l0-tint-amber: #33291a;
+
+  --l0-line: #2b4640;
+  --l0-line-2: #243b36;
+  --l0-dash: #3c5b53;
+
+  --md-primary-fg-color: #74d3b7;
+  --md-primary-fg-color--light: #3f9e85;
+  --md-primary-fg-color--dark: #9fe6cf;
+  --md-primary-bg-color: #0f1f1b;
+  --md-primary-bg-color--light: #143029;
+  --md-accent-fg-color: #9fe6cf;
+  --md-accent-fg-color--transparent: rgba(159, 230, 207, 0.14);
+  --md-typeset-a-color: #86b9ea;
+}
+
+body,
+input {
+  font-family: var(--l0-sans);
+}
+
+/* ------------------------------------------------------------------ *
+ * 2. 版面与正文
+ * ------------------------------------------------------------------ */
+.md-content__inner {
+  max-width: 46rem;
+}
+
+.md-typeset {
+  color: var(--l0-ink-2);
+}
+
+.md-typeset p,
+.md-typeset li {
+  line-height: 1.8;
+}
+
+.l0-page {
+  padding-bottom: 1rem;
+}
+
+.l0-page h1 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--l0-ink);
+  margin: 0.1rem 0 1rem;
+}
+
+.l0-page h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--l0-ink);
+  margin: 1.9rem 0 0.7rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--l0-line-2);
+}
+
+.l0-page h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--l0-ink);
+  margin: 1.4rem 0 0.5rem;
+}
+
+.l0-para {
+  margin: 0.6rem 0 0.9rem;
+}
+
+.l0-lead {
+  font-size: 1.02rem;
+  color: var(--l0-ink-2);
+  margin: 0 0 1.4rem;
+}
+
+.md-typeset code {
+  background: var(--l0-tint-green);
+  color: var(--l0-ink);
+  border-radius: 4px;
+  padding: 0.08em 0.32em;
+  font-size: 0.9em;
+}
+
+/* ------------------------------------------------------------------ *
+ * 3. 页眉（讲义页眉：课题 + 页码）
+ * ------------------------------------------------------------------ */
+.l0-pagehead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  border-bottom: 1px solid var(--l0-line-2);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--l0-ink);
+}
+
+.l0-pagehead__num {
+  color: var(--l0-muted);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ------------------------------------------------------------------ *
+ * 4. 卡片组
+ * ------------------------------------------------------------------ */
+.l0-cards {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0.9rem 0;
+}
+
+.l0-cards--1 {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.l0-cards--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.l0-cards--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.l0-cards--4,
+.l0-cards--5 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.l0-card {
+  background: var(--l0-surface);
+  border: 1px solid var(--l0-line);
+  border-radius: 14px;
+  padding: 1.05rem 0.8rem;
+  text-align: center;
+}
+
+.l0-card__big {
+  font-family: var(--l0-jp);
+  font-size: 1.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--l0-ink);
+}
+
+.l0-card__reading {
+  font-family: var(--l0-jp);
+  font-size: 0.9rem;
+  color: var(--l0-blue);
+  margin-top: 0.3rem;
+}
+
+.l0-card__reading--muted {
+  color: var(--l0-muted);
+}
+
+.l0-card__label {
+  font-size: 0.82rem;
+  color: var(--l0-muted);
+  margin-top: 0.15rem;
+}
+
+.l0-t-blue {
+  color: var(--l0-blue);
+}
+
+.l0-t-amber {
+  color: var(--l0-amber);
+}
+
+.l0-t-muted {
+  color: var(--l0-muted);
+}
+
+.l0-card--amber {
+  background: var(--l0-tint-amber);
+  border-color: #f0e0bd;
+}
+
+[data-md-color-scheme="slate"] .l0-card--amber {
+  border-color: #4a3a1e;
+}
+
+.l0-card--span-2 {
+  grid-column: span 2;
+}
+
+.l0-panel {
+  background: var(--l0-surface);
+  border: 1px solid var(--l0-line);
+  border-radius: 16px;
+  padding: 1rem;
+  margin: 0.9rem 0;
+}
+
+.l0-panel .l0-card {
+  background: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .l0-panel .l0-card {
+  background: #22352f;
+}
+
+.l0-caption {
+  font-size: 0.92rem;
+  color: var(--l0-ink-2);
+  margin: 0.7rem 0 0;
+}
+
+/* ------------------------------------------------------------------ *
+ * 5. 聚焦卡片（罗马字 / きしゃ）
+ * ------------------------------------------------------------------ */
+.l0-hero {
+  background: var(--l0-surface-blue);
+  border: 1px solid #dbe8f3;
+  border-radius: 14px;
+  padding: 1.4rem 1rem;
+  text-align: center;
+  margin: 1rem 0 1.2rem;
+}
+
+[data-md-color-scheme="slate"] .l0-hero {
+  border-color: #23404f;
+}
+
+.l0-hero__big {
+  font-family: var(--l0-jp);
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.l0-hero__reading {
+  font-family: var(--l0-jp);
+  font-size: 0.95rem;
+  color: var(--l0-muted);
+  margin-top: 0.3rem;
+}
+
+.l0-hero__reading--blue {
+  color: var(--l0-blue);
+}
+
+.l0-hero__cap {
+  font-size: 0.95rem;
+  color: var(--l0-ink-2);
+  margin-top: 0.45rem;
+}
+
+/* ------------------------------------------------------------------ *
+ * 6. 问题与书写区
+ * ------------------------------------------------------------------ */
+.l0-q {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  margin: 1.2rem 0 0.1rem;
+}
+
+.l0-badge {
+  flex: 0 0 auto;
+  background: var(--l0-tint-green-2);
+  color: var(--l0-ink);
+  border-radius: 999px;
+  padding: 0.12rem 0.62rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.7;
+  white-space: nowrap;
+  margin-top: 0.12rem;
+}
+
+.l0-q__text {
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--l0-ink);
+}
+
+.l0-rules {
+  margin: 0.9rem 0 1.1rem;
+}
+
+.l0-rule {
+  border: 0;
+  border-top: 1px dashed var(--l0-dash);
+  margin: 0 0 1.5rem;
+}
+
+.l0-write--box {
+  border: 1px dashed var(--l0-dash);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  background: var(--l0-surface);
+  margin: 0.55rem 0 1.1rem;
+}
+
+.l0-write__label {
+  font-size: 0.92rem;
+  color: var(--l0-muted);
+}
+
+.l0-write__rule {
+  display: inline-block;
+  width: 58%;
+  border-bottom: 1px solid var(--l0-dash);
+  vertical-align: baseline;
+}
+
+/* ------------------------------------------------------------------ *
+ * 7. 提示框 / 分隔 / 脚注
+ * ------------------------------------------------------------------ */
+.l0-note {
+  background: var(--l0-tint-green);
+  border-left: 3px solid var(--l0-ink);
+  border-radius: 8px;
+  padding: 0.85rem 1.1rem;
+  margin: 1.2rem 0;
+  color: var(--l0-ink-2);
+}
+
+.l0-note p {
+  margin: 0;
+}
+
+.l0-note--amber {
+  background: var(--l0-tint-amber);
+  border-left-color: var(--l0-amber);
+}
+
+.l0-note__title {
+  font-weight: 700;
+  color: var(--l0-ink);
+  margin-bottom: 0.2rem !important;
+}
+
+.l0-hr {
+  border: 0;
+  border-top: 1px solid var(--l0-line-2);
+  margin: 1.7rem 0;
+}
+
+.l0-foot {
+  font-size: 0.88rem;
+  color: var(--l0-muted);
+  line-height: 1.75;
+  margin: 0.2rem 0 1rem;
+}
+
+/* ------------------------------------------------------------------ *
+ * 8. 表格与列表
+ * ------------------------------------------------------------------ */
+.l0-tablewrap {
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+}
+
+.l0-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.l0-table th {
+  text-align: left;
+  background: var(--l0-tint-green);
+  color: var(--l0-ink);
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--l0-line);
+  font-weight: 700;
+}
+
+.l0-table td {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--l0-line);
+  color: var(--l0-ink-2);
+  vertical-align: top;
+  line-height: 1.75;
+}
+
+.l0-table__caption {
+  font-size: 0.9rem;
+  color: var(--l0-muted);
+  margin: 0.4rem 0;
+}
+
+.l0-list {
+  margin: 0.8rem 0 1.3rem;
+  padding-left: 1.3rem;
+}
+
+.l0-list li {
+  margin-bottom: 0.45rem;
+}
+
+.l0-list--check {
+  list-style: none;
+  padding-left: 0.2rem;
+}
+
+.l0-list--check li {
+  position: relative;
+  padding-left: 1.7rem;
+}
+
+.l0-list--check li::before {
+  content: "☐";
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  color: var(--l0-ink);
+}
+
+/* ------------------------------------------------------------------ *
+ * 9. 首页封面 / 按钮 / 入口卡
+ * ------------------------------------------------------------------ */
+.l0-cover {
+  padding: 1.6rem 0 0.4rem;
+}
+
+.l0-cover__eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: var(--l0-muted);
+  margin: 0 0 0.5rem;
+}
+
+.l0-cover__title {
+  font-size: 2.55rem;
+  font-weight: 800;
+  line-height: 1.22;
+  color: var(--l0-ink);
+  margin: 0 0 0.9rem;
+}
+
+.l0-cover__lead {
+  font-size: 1.06rem;
+  line-height: 1.85;
+  color: var(--l0-ink-2);
+  max-width: 40rem;
+}
+
+.l0-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 1.5rem 0 1.4rem;
+}
+
+.l0-btn {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--l0-ink);
+  color: var(--l0-ink);
+  background: transparent;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.l0-btn:hover {
+  background: var(--l0-tint-green-2);
+}
+
+.l0-btn--primary {
+  background: var(--l0-ink);
+  color: #ffffff;
+}
+
+.l0-btn--small {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.88rem;
+  margin-top: 0.1rem;
+}
+
+.l0-btn--primary:hover {
+  background: var(--l0-ink);
+  opacity: 0.88;
+}
+
+[data-md-color-scheme="slate"] .l0-btn--primary {
+  color: #0f1f1b;
+}
+
+[data-md-color-scheme="slate"] .l0-btn:hover {
+  background: var(--l0-tint-green-2);
+}
+
+.l0-linkcard {
+  display: block;
+  border: 1px solid var(--l0-line);
+  border-radius: 14px;
+  padding: 1.05rem 1.2rem;
+  background: var(--l0-surface);
+  text-decoration: none;
+  color: inherit;
+  margin: 0.6rem 0 1.3rem;
+}
+
+.l0-linkcard:hover {
+  border-color: var(--l0-ink);
+}
+
+.l0-linkcard__eyebrow {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--l0-amber);
+}
+
+.l0-linkcard__title {
+  display: block;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--l0-ink);
+  margin: 0.2rem 0 0.25rem;
+}
+
+.l0-linkcard__desc {
+  display: block;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--l0-ink-2);
+}
+
+/* ------------------------------------------------------------------ *
+ * 10. 目录列表（学生版概览）
+ * ------------------------------------------------------------------ */
+.l0-pagelist {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.l0-pagelist__item {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--l0-line);
+  border-radius: 12px;
+  background: var(--l0-surface);
+  text-decoration: none;
+  color: inherit;
+}
+
+.l0-pagelist__item:hover {
+  border-color: var(--l0-ink);
+}
+
+.l0-pagelist__num {
+  font-weight: 800;
+  color: var(--l0-blue);
+  font-size: 1.05rem;
+  min-width: 1.1rem;
+}
+
+.l0-pagelist__title {
+  display: block;
+  font-weight: 700;
+  color: var(--l0-ink);
+}
+
+.l0-pagelist__desc {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--l0-muted);
+  margin-top: 0.15rem;
+  line-height: 1.65;
+}
+
+/* ------------------------------------------------------------------ *
+ * 11. 翻页导航
+ * ------------------------------------------------------------------ */
+.l0-pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.2rem;
+  margin-top: 2.4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--l0-line-2);
+  font-size: 0.93rem;
+}
+
+.l0-pager__link {
+  color: var(--l0-ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.l0-pager__link:hover {
+  text-decoration: underline;
+}
+
+.l0-pager__link--next {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* ------------------------------------------------------------------ *
+ * 12. 教师区：横幅与提示
+ * ------------------------------------------------------------------ */
+.l0-banner {
+  border: 1px solid #e7c9a0;
+  border-left: 4px solid var(--l0-amber);
+  background: var(--l0-tint-amber);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  margin: 1rem 0 1.7rem;
+}
+
+.l0-banner__title {
+  font-weight: 800;
+  color: #8a4f0e;
+  margin: 0 0 0.25rem;
+}
+
+.l0-banner__text {
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.75;
+  color: var(--l0-ink-2);
+}
+
+[data-md-color-scheme="slate"] .l0-banner {
+  border-color: #4a3a1e;
+}
+
+[data-md-color-scheme="slate"] .l0-banner__title {
+  color: var(--l0-amber);
+}
+
+.l0-adm {
+  border: 1px solid var(--l0-line);
+  border-left: 4px solid var(--l0-blue);
+  background: var(--l0-surface-blue);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.1rem 0 1.5rem;
+}
+
+.l0-adm--warning {
+  background: var(--l0-tint-amber);
+  border-color: #ebd3ac;
+  border-left-color: var(--l0-amber);
+}
+
+.l0-adm p {
+  margin: 0;
+}
+
+.l0-adm__title {
+  font-weight: 700;
+  color: var(--l0-ink);
+  margin-bottom: 0.25rem !important;
+}
+
+/* ------------------------------------------------------------------ *
+ * 13. 窄屏
+ * ------------------------------------------------------------------ */
+@media screen and (max-width: 44.984375em) {
+  .l0-cards--2,
+  .l0-cards--3,
+  .l0-cards--4,
+  .l0-cards--5 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .l0-card--span-2 {
+    grid-column: span 1;
+  }
+
+  .l0-cover__title {
+    font-size: 2rem;
+  }
+
+  .l0-page h1 {
+    font-size: 1.7rem;
+  }
+
+  .l0-pager {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * 14. 打印：每一页就是一张讲义
+ * ------------------------------------------------------------------ */
+@media print {
+  /* 打印一律使用浅色讲义版式，不跟随屏幕上的深色主题 */
+  [data-md-color-scheme] {
+    --l0-ink: #164b42;
+    --l0-ink-2: #233a36;
+    --l0-muted: #567b72;
+    --l0-blue: #236baa;
+    --l0-amber: #a86716;
+    --l0-surface: #f8fbf9;
+    --l0-surface-blue: #f2f8fb;
+    --l0-tint-green: #edf6f0;
+    --l0-tint-green-2: #e2f2eb;
+    --l0-tint-amber: #fff9ef;
+    --l0-line: #dbe8e2;
+    --l0-line-2: #e2ece7;
+    --l0-dash: #c7dad2;
+    --md-default-bg-color: #ffffff;
+    --md-default-fg-color: #233a36;
+    --md-text-color: #233a36;
+    --md-accent-fg-color: #236baa;
+    --md-primary-fg-color: #164b42;
+  }
+
+  /* 选择器要带上属性前缀，才能压过深色主题里同名的规则 */
+  [data-md-color-scheme] .l0-panel .l0-card {
+    background: #ffffff;
+  }
+
+  [data-md-color-scheme] .l0-card--amber {
+    border-color: #f0e0bd;
+  }
+
+  [data-md-color-scheme] .l0-hero {
+    border-color: #dbe8f3;
+  }
+
+  [data-md-color-scheme] .l0-banner {
+    border-color: #e7c9a0;
+  }
+
+  [data-md-color-scheme] .l0-banner__title {
+    color: #8a4f0e;
+  }
+
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer,
+  .md-top,
+  .md-search,
+  .md-content__button,
+  .md-typeset .md-button {
+    display: none !important;
+  }
+
+  .md-grid {
+    display: block;
+  }
+
+  /* 主题用 100% 高度撑布局，打印时会多出一张空白页，这里改回自然高度 */
+  html,
+  body {
+    height: auto;
+    min-height: 0;
+  }
+
+  .md-container,
+  .md-main,
+  .md-main__inner {
+    display: block;
+    height: auto;
+    min-height: 0;
+    flex: none;
+  }
+
+  .md-main__inner {
+    margin-top: 0;
+  }
+
+  .md-content,
+  .md-content__inner {
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .l0-page {
+    padding-bottom: 0;
+  }
+
+  .l0-foot {
+    margin-bottom: 0;
+  }
+
+  .md-typeset a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* 保留讲义的浅色底纹 */
+  .l0-card,
+  .l0-panel,
+  .l0-note,
+  .l0-hero,
+  .l0-write--box,
+  .l0-badge,
+  .l0-rules,
+  .l0-q,
+  .l0-pager {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .l0-card,
+  .l0-panel,
+  .l0-note,
+  .l0-hero,
+  .l0-write--box,
+  .l0-rules,
+  .l0-q {
+    break-inside: avoid;
+  }
+
+  /* 收紧排版：尽量让一页讲义落在一张纸上 */
+  .l0-page h1 {
+    font-size: 1.6rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .l0-page h2 {
+    font-size: 1.1rem;
+    margin: 1rem 0 0.4rem;
+  }
+
+  .l0-lead {
+    margin-bottom: 0.8rem;
+  }
+
+  .l0-card {
+    padding: 0.6rem 0.5rem;
+  }
+
+  .l0-card__big {
+    font-size: 1.5rem;
+  }
+
+  .l0-hero {
+    padding: 0.8rem 0.6rem;
+    margin: 0.6rem 0 0.8rem;
+  }
+
+  .l0-hero__big {
+    font-size: 1.7rem;
+  }
+
+  .l0-q {
+    margin: 0.7rem 0 0.1rem;
+  }
+
+  .l0-rules {
+    margin: 0.5rem 0 0.7rem;
+  }
+
+  .l0-rule {
+    margin-bottom: 1rem;
+  }
+
+  .l0-note {
+    margin: 0.7rem 0;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .l0-write--box {
+    margin: 0.4rem 0 0.7rem;
+  }
+
+  .l0-pager {
+    display: none;
+  }
+
+  @page {
+    size: A4;
+    margin: 14mm 13mm;
+  }
+}

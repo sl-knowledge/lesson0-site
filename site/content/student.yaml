@@ -1,0 +1,340 @@
+# 学生版内容真源（第零课 · 同一个声音，可以怎么写？）
+# 由 tools/build_content.py 渲染为 docs/student/*.md
+meta:
+  lesson: 第零课
+  title: 同一个声音，可以怎么写？
+  version: v1
+
+overview:
+  title: 学生版 · 概览与用法
+  lead: 这一版是第零课的学生讲义：六页，每页一个观察。今天不背日语词，也不背五十音。
+  blocks:
+    - type: note
+      title: 怎么用
+      text: |
+        **每一页都先写下自己的想法，再翻到下一页。** 空白处不是装饰，是这一课真正要产出的东西：你的问题，和你打算怎么检验它。
+    - type: pagelist
+      items:
+        - num: "1"
+          title: 先从你熟悉的中文开始
+          desc: 拼音记读音；日语的罗马字、平假名、片假名记的是同一个词。
+          to: student/page-1.md
+        - num: "2"
+          title: 同一个读音，可能有两个意思吗？
+          desc: 权利／权力，きしゃ；给你一把“用汉字区分意思”的工具。
+          to: student/page-2.md
+        - num: "3"
+          title: 日语真的采用了类似的办法吗？
+          desc: 記者／汽車；然后轮到你自己提出下一个问题。
+          to: student/page-3.md
+        - num: "4"
+          title: 再看两个词，和刚才一样吗？
+          desc: 見る／食べる：汉字后面的假名，也属于这个词。
+          to: student/page-4.md
+        - num: "5"
+          title: 一个词，可以有多少种模样？
+          desc: 学校、食べる、これ、テレビ、消しゴム：一个词可以混着几种文字写。
+          to: student/page-5.md
+        - num: "6"
+          title: 最后，一个小小的自测
+          desc: 山／富士山：同一个汉字，可能有不同读音。
+          to: student/page-6.md
+    - type: download
+      tone: amber
+      title: 打印版
+      text: 同一份讲义另有可打印的 PDF（A4，六页）。浏览器里直接打印也可以，页面已按讲义排版。
+      to: assets/downloads/lesson0-student-handout-v1.pdf
+      label: 下载学生版 PDF（A4 · 6 页）
+    - type: hr
+    - type: foot
+      text: 第零课 · 试教稿 v1 · 中文母语者学习日语
+
+pages:
+  - id: p1
+    nav: 第 1 页 · 先从你熟悉的中文开始
+    file: student/page-1.md
+    title: 先从你熟悉的中文开始
+    head: 第零课 · 同一个声音，可以怎么写？
+    lead: 今天不是背日语单词。我们做几个小观察，看看一种语言的声音，可以怎样写下来。你随时可以在空白处记下自己想到的新问题。
+    blocks:
+      - type: cards
+        cols: 2
+        panel: true
+        items:
+          - big: 马
+            label: 汉字
+          - big: mǎ
+            label: 中文拼音
+        caption: 你知道：“马”和 **mǎ** 在这里可以指向同一个中文词。拼音帮助我们记录它的读音。
+      - type: para
+        text: 日语也可以用罗马字记录读音。比如，“狗”这个日语词的读音可以写作：
+      - type: hero
+        tone: blue
+        big: inu
+        reading: 罗马字写法 · 日语“狗”
+      - type: para
+        text: 日本还有两套自己的表音文字。下面三种写法记录的是同一个日语词：
+      - type: cards
+        cols: 3
+        items:
+          - big: inu
+            label: 罗马字
+          - big: いぬ
+            accent: blue
+            label: 平假名
+          - big: イヌ
+            accent: amber
+            label: 片假名
+      - type: question
+        num: 1
+        label: 观察
+        text: 这三种写法的相同点和不同点是什么？
+      - type: write
+        lines: 1
+      - type: foot
+        text: 此刻只需要知道它们能记录读音，不需要背这些符号。日语罗马字与汉语拼音都是用拉丁字母辅助表示声音，但对应规则不同。
+
+  - id: p2
+    nav: 第 2 页 · 同一个读音，可能有两个意思吗？
+    file: student/page-2.md
+    title: 同一个读音，可能有两个意思吗？
+    head: 第零课 · 同一个声音，可以怎么写？
+    lead: 先不看日语。你对中文已经很熟悉，这里有个问题可能一眼就能发现。
+    blocks:
+      - type: cards
+        cols: 2
+        items:
+          - big: 权利
+            reading: quánlì
+            reading_tone: muted
+          - big: 权力
+            reading: quánlì
+            reading_tone: muted
+      - type: question
+        num: 2
+        label: 问题
+        text: 这两个词读音一样吗？意思一样吗？
+      - type: write
+        lines: 1
+      - type: question
+        num: 3
+        label: 问题
+        text: 如果只能看到 `quánlì`，为什么有时不容易立刻判断是哪一个词？汉字提供了什么帮助？
+      - type: write
+        lines: 1
+      - type: hr
+      - type: para
+        text: 现在转到日语。下面是一个日语读音：
+      - type: hero
+        tone: blue
+        big: きしゃ
+        accent: blue
+        reading: kisha
+        reading_tone: blue
+        caption: 它既可以表示“记者”，也可以表示“蒸汽列车”。
+      - type: para
+        text: "**我们给你一把工具：** 假设日语也允许使用汉字来写词语，就像中文把读音写成不同的汉字词一样。"
+      - type: question
+        num: 4
+        label: 轮到你
+        text: 如果你可以使用汉字，想怎样让“记者”和“蒸汽列车”在纸上更容易区分？
+      - type: write
+        box: true
+        lines: 2
+        label: 写出你想到的两个不同写法。可先用你认识的中文字，不要求写对日语。
+      - type: foot
+        text: 写好以后再翻页。我们会看到真实日语怎样处理。
+
+  - id: p3
+    nav: 第 3 页 · 日语真的采用了类似的办法吗？
+    file: student/page-3.md
+    title: 日语真的采用了类似的办法吗？
+    head: 第零课 · 同一个声音，可以怎么写？
+    lead: 对照你上一页写下的想法。来看真实日语里的这两个词。
+    blocks:
+      - type: cards
+        cols: 2
+        items:
+          - big: 記者
+            reading: きしゃ · kisha
+            label: 记者
+          - big: 汽車
+            reading: きしゃ · kisha
+            label: 蒸汽列车
+      - type: question
+        num: 5
+        label: 比较
+        text: 它们的读音相同；改用不同汉字写出来后，增加了什么信息？
+      - type: write
+        lines: 1
+      - type: note
+        text: |
+          **你刚刚用中文的经验理解了一个日语现象：** 表音写法能记录声音；不同汉字能够让读者更容易分清同音词的意义。日语口语仍然能靠上下文理解，不是听不懂就无法交流。
+      - type: hr
+      - type: heading
+        level: 2
+        text: 现在，先不要看下一组例子
+      - type: para
+        text: 刚才我们只见过两个日语词，它们都完全用汉字写出来了。
+      - type: question
+        num: 6
+        label: 你的问题
+        text: 如果让你继续研究日语，你现在最想知道什么？
+      - type: write
+        box: true
+        inline: true
+        label: 我想问：
+      - type: question
+        label: 再想一点
+        text: 你为什么会想到这个问题？你想用什么新例子检验它？
+      - type: write
+        lines: 1
+      - type: foot
+        text: 没有唯一的标准问题。只要是从刚才的观察中想到、能够继续研究的疑问，就值得留下来。
+
+  - id: p4
+    nav: 第 4 页 · 再看两个词，和刚才一样吗？
+    file: student/page-4.md
+    title: 再看两个词，和刚才一样吗？
+    head: 第零课 · 同一个声音，可以怎么写？
+    lead: 刚才两个日语词全部写成了汉字。现在出现了新的真实例子。你觉得之前的理解要不要改一改？
+    blocks:
+      - type: cards
+        cols: 2
+        items:
+          - big: みる
+            accent: blue
+            reading: miru
+            label: 看
+          - parts:
+              - t: 見
+                c: ink
+              - t: る
+                c: blue
+            reading: miru
+            label: 看
+          - big: たべる
+            accent: blue
+            reading: taberu
+            label: 吃
+          - parts:
+              - t: 食
+                c: ink
+              - t: べる
+                c: blue
+            reading: taberu
+            label: 吃
+      - type: question
+        num: 7
+        label: 观察
+        text: 每一行的两种写法，读音、意思有什么关系？右边哪些小字仍然保留了？
+      - type: write
+        lines: 1
+      - type: question
+        num: 8
+        label: 预测
+        text: 如果你只认得“食”这个汉字，会不会就把 `食べる` 的后面误当成另一个词？
+      - type: write
+        lines: 1
+      - type: note
+        text: |
+          **一个重要的发现：** 見る 是一个完整的日语词，食べる 也是一个完整的日语词。不能看到汉字就认为词已经结束。后面的假名也可能属于这个词。
+      - type: foot
+        text: 今天不需要弄懂每个假名的具体作用。以后我们可以继续研究：那些保留下来的假名，究竟在做什么？
+
+  - id: p5
+    nav: 第 5 页 · 一个词，可以有多少种模样？
+    file: student/page-5.md
+    title: 一个词，可以有多少种模样？
+    head: 第零课 · 同一个声音，可以怎么写？
+    lead: 再看五个真实日语词。每个框里是一个完整的词。请观察文字组合，不需要记它们的读音。
+    blocks:
+      - type: cards
+        cols: 2
+        items:
+          - big: 学校
+            reading: がっこう · gakkō
+            label: 学校
+          - parts:
+              - t: 食
+                c: ink
+              - t: べる
+                c: blue
+            reading: たべる · taberu
+            label: 吃
+          - big: これ
+            accent: blue
+            reading: kore
+            label: 这个
+          - big: テレビ
+            accent: amber
+            reading: terebi
+            label: 电视
+          - parts:
+              - t: 消
+                c: ink
+              - t: し
+                c: blue
+              - t: ゴム
+                c: amber
+            reading: けしゴム · keshigomu
+            label: 橡皮擦 · 这也是一个词
+            tone: amber
+            span: 2
+      - type: question
+        num: 9
+        label: 归纳
+        text: 你现在会怎样向一个没学过日语的朋友解释：日语的一个词可以怎样写？
+      - type: write
+        lines: 1
+      - type: question
+        num: 10
+        label: 继续提问
+        text: 这些例子又让你想到什么新问题？
+      - type: write
+        lines: 1
+      - type: note
+        text: |
+          **今天先不用背语法：** 汉字、平假名、片假名可以组成不同的词语写法；一个词可以由一种文字写成，也可以混合几种文字。文字换了种类，不等于就换了一个词。
+
+  - id: p6
+    nav: 第 6 页 · 最后，一个小小的自测
+    file: student/page-6.md
+    title: 最后，一个小小的自测
+    head: 第零课 · 同一个声音，可以怎么写？
+    lead: 如果你愿意，再看一个容易让中文学习者产生猜想的现象。它可以留作我们下一次研究的问题。
+    blocks:
+      - type: cards
+        cols: 2
+        items:
+          - big: 山
+            reading: やま · yama
+            label: 山
+          - big: 富士山
+            reading: ふじさん · fujisan
+            label: 富士山
+      - type: question
+        num: 11
+        label: 想一想
+        text: 你原来可能以为同一个汉字总是读同一个声音。看到这两个词，你会怎样调整这个想法？
+      - type: write
+        lines: 1
+      - type: foot
+        text: 真实日语里，同一汉字可能有不同读音。常见读法有规律，但单凭字形往往不能确定具体词语的读法。今天只需发现这个问题，不需要记读音规则表。
+      - type: hr
+      - type: heading
+        level: 2
+        text: 把下一步交给你
+      - type: para
+        text: "**现在，你最想研究哪个问题？** 不必和老师准备的一样。"
+      - type: write
+        box: true
+        inline: true
+        label: 我的下一个问题：
+      - type: para
+        text: "**你准备怎样找证据？** 比如对比两个新词、查词典、向老师或 AI 求证。"
+      - type: write
+        lines: 1
+      - type: note
+        text: |
+          **给自己的话：** 今天最重要的，不是记住多少词，而是你已经能够从自己熟悉的中文出发，发现日语里一个新现象，并开始提出下一个问题。

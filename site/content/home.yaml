@@ -1,0 +1,49 @@
+# 首页内容真源
+title: 第零课 · 同一个声音，可以怎么写？
+
+cover:
+  eyebrow: 第零课 · 中文母语者学习日语 · 试教稿 v1
+  title: 同一个声音，可以怎么写？
+  lead: 今天不背日语词，也不背五十音。做几个小观察，看看一种语言的声音可以怎样写下来——然后，把“下一个问题”交给你自己提出。
+
+blocks:
+  - type: buttons
+    items:
+      - {text: 进入学生版 · 6 页, to: student/index.md, primary: true}
+      - {text: 下载打印版 PDF, to: assets/downloads/lesson0-student-handout-v1.pdf, asset: true}
+
+  - type: heading
+    level: 2
+    text: 这一课在做什么
+  - type: cards
+    cols: 3
+    items:
+      - big: 观察
+        label: 同一个声音可以有三种写法：inu、いぬ、イヌ。
+      - big: 工具
+        label: 汉字不记读音，但能帮读者分清同音词：記者／汽車。
+      - big: 交棒
+        label: 第三页停下来，由你自己提出下一个问题，并说清怎么检验它。
+
+  - type: heading
+    level: 2
+    text: 给老师
+  - type: linkcard
+    to: teacher/guide.md
+    eyebrow: 教师区 · 仅教师
+    title: 教师用：问题生成支架与核查
+    desc: 本课真正的学习目标、教师后台的知识与纪律、支架阶梯、课堂观察清单与事实核验出处。站点是纯静态页面，没有访问控制，请勿向学生投屏或分发该链接。
+  - type: note
+    tone: amber
+    title: 学生版与教师版分开
+    text: 学生版六页只呈现材料与问题，不含任何预设路径、提示或示范答案；教师内容全部收在独立的“教师区”里。
+
+  - type: heading
+    level: 2
+    text: 关于这个站点
+  - type: note
+    title: 纯静态 · 可离线 · 可打印
+    text: |
+      内容真源是 YAML，构建产物是静态 HTML/CSS。除 Material 主题自带的搜索与翻页外，没有任何自写 JavaScript；没有统计脚本，没有 Cookie，也不向外部站点发起请求。每一页都按 A4 讲义排版，浏览器直接打印即可分发。
+  - type: foot
+    text: 第零课 · 试教稿 v1 · MkDocs + Material 构建
