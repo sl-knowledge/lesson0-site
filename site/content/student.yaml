@@ -18,27 +18,27 @@ overview:
         - num: "1"
           title: 先从你熟悉的中文开始
           desc: 拼音记读音；日语的罗马字、平假名、片假名记的是同一个词。
-          to: student/page-1.md
+          to: jp/l0/page-1.md
         - num: "2"
           title: 同一个读音，可能有两个意思吗？
           desc: 权利／权力，きしゃ；给你一把“用汉字区分意思”的工具。
-          to: student/page-2.md
+          to: jp/l0/page-2.md
         - num: "3"
           title: 日语真的采用了类似的办法吗？
           desc: 記者／汽車；然后轮到你自己提出下一个问题。
-          to: student/page-3.md
+          to: jp/l0/page-3.md
         - num: "4"
           title: 再看两个词，和刚才一样吗？
           desc: 見る／食べる：汉字后面的假名，也属于这个词。
-          to: student/page-4.md
+          to: jp/l0/page-4.md
         - num: "5"
           title: 一个词，可以有多少种模样？
           desc: 学校、食べる、これ、テレビ、消しゴム：一个词可以混着几种文字写。
-          to: student/page-5.md
+          to: jp/l0/page-5.md
         - num: "6"
           title: 最后，一个小小的自测
           desc: 山／富士山：同一个汉字，可能有不同读音。
-          to: student/page-6.md
+          to: jp/l0/page-6.md
     - type: download
       tone: amber
       title: 打印版
@@ -52,7 +52,7 @@ overview:
 pages:
   - id: p1
     nav: 第 1 页 · 先从你熟悉的中文开始
-    file: student/page-1.md
+    file: jp/l0/page-1.md
     title: 先从你熟悉的中文开始
     head: 第零课 · 同一个声音，可以怎么写？
     lead: 今天不是背日语单词。我们做几个小观察，看看一种语言的声音，可以怎样写下来。你随时可以在空白处记下自己想到的新问题。
@@ -96,7 +96,7 @@ pages:
 
   - id: p2
     nav: 第 2 页 · 同一个读音，可能有两个意思吗？
-    file: student/page-2.md
+    file: jp/l0/page-2.md
     title: 同一个读音，可能有两个意思吗？
     head: 第零课 · 同一个声音，可以怎么写？
     lead: 先不看日语。你对中文已经很熟悉，这里有个问题可能一眼就能发现。
@@ -147,7 +147,7 @@ pages:
 
   - id: p3
     nav: 第 3 页 · 日语真的采用了类似的办法吗？
-    file: student/page-3.md
+    file: jp/l0/page-3.md
     title: 日语真的采用了类似的办法吗？
     head: 第零课 · 同一个声音，可以怎么写？
     lead: 对照你上一页写下的想法。来看真实日语里的这两个词。
@@ -194,7 +194,7 @@ pages:
 
   - id: p4
     nav: 第 4 页 · 再看两个词，和刚才一样吗？
-    file: student/page-4.md
+    file: jp/l0/page-4.md
     title: 再看两个词，和刚才一样吗？
     head: 第零课 · 同一个声音，可以怎么写？
     lead: 刚才两个日语词全部写成了汉字。现在出现了新的真实例子。你觉得之前的理解要不要改一改？
@@ -244,7 +244,7 @@ pages:
 
   - id: p5
     nav: 第 5 页 · 一个词，可以有多少种模样？
-    file: student/page-5.md
+    file: jp/l0/page-5.md
     title: 一个词，可以有多少种模样？
     head: 第零课 · 同一个声音，可以怎么写？
     lead: 再看五个真实日语词。每个框里是一个完整的词。请观察文字组合，不需要记它们的读音。
@@ -299,7 +299,7 @@ pages:
 
   - id: p6
     nav: 第 6 页 · 最后，一个小小的自测
-    file: student/page-6.md
+    file: jp/l0/page-6.md
     title: 最后，一个小小的自测
     head: 第零课 · 同一个声音，可以怎么写？
     lead: 如果你愿意，再看一个容易让中文学习者产生猜想的现象。它可以留作我们下一次研究的问题。

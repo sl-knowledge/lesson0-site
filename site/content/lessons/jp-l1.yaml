@@ -1,0 +1,260 @@
+# 本文件由 tools/import_lessons.py 从 原始讲义 Markdown 自动生成，可手工修改。
+id: jp-l1
+course: jp
+title: 第一课 · 一句话，为什么能有不同说法？
+overview:
+  title: 第一课 · 学生版 · 概览与用法
+  lead: 共 4 页，每页一个观察。这一课不背词条：先写下自己的想法，再翻到下一页核对。
+  blocks:
+  - type: note
+    title: 怎么用
+    text: '**每一页都先写下自己的想法，再翻到下一页。** 空白处不是装饰，是这一课真正要产出的东西：你的问题，和你打算怎么检验它。'
+  - type: pagelist
+    items:
+    - num: '1'
+      title: 从中文开始
+      desc: ''
+      to: jp/l1/page-1.md
+    - num: '2'
+      title: 换了位置，怎么知道谁在看？
+      desc: ''
+      to: jp/l1/page-2.md
+    - num: '3'
+      title: 原来日语也有类似的办法！
+      desc: ''
+      to: jp/l1/page-3.md
+    - num: '4'
+      title: 你已经可以读懂新句子了吗？
+      desc: ''
+      to: jp/l1/page-4.md
+  - type: download
+    tone: amber
+    title: 打印版
+    text: 同一份讲义另有可打印的 PDF（A4，4 页）。浏览器里直接打印也可以，页面已按讲义排版。作者 SL，内容以 CC BY-NC-SA 4.0 授权。
+    to: assets/downloads/lesson1-jp-student-v1.pdf
+    label: 下载学生版 PDF（A4 · 4 页）
+  - type: hr
+  - type: foot
+    text: 第一课 · 一句话，为什么能有不同说法？ · 学生讲义 v1 · 中文母语者学习日语 · 作者 SL
+pages:
+- file: jp/l1/page-1.md
+  title: 从中文开始
+  head: 第一课 · 从中文开始
+  blocks:
+  - type: note
+    tone: green
+    title: ''
+    text: 不用学过日语，也不用懂语法。我们先观察你每天都在使用的中文。 今天只探索一个问题：**别人怎么知道“是谁看见了谁”？**
+  - type: hr
+  - type: label
+    text: 请先看三句话：
+  - type: para
+    text: ① **我看见了那只狗。** ② **那只狗，我看见了。** ③ **那只狗看见了我。**
+  - type: question
+    label: 想一想
+    num: '1'
+    text: 哪两句说的是同一件事？
+  - type: list
+    marker: checkbox
+    items:
+    - ① 和 ②
+    - ① 和 ③
+    - ② 和 ③
+  - type: hint
+    text: 提示：不要光看第一个词，先问自己“到底是谁在看？”
+  - type: question
+    label: 想一想
+    num: '2'
+    text: ②、③ 都从“那只狗”开始，为什么意思不同？
+  - type: write
+    label: 我的想法：
+    lines: 1
+  - type: label
+    text: 再观察：
+  - type: list
+    items:
+    - '**我把杯子打碎了。**'
+    - '**杯子被我打碎了。**'
+  - type: para
+    text: 顺序很不一样，你仍然知道是谁打碎了杯子。
+  - type: para
+    text: 我们先不研究“把”“被”的所有规则，只记住：中文本来就有不止一种帮助我们理解句子的方法。
+  - type: note
+    tone: green
+    title: 第一个发现
+    text: 你熟悉的语序并不是传达意思的唯一办法。既然中文都能有不同说法，日语采用别的办法，也不奇怪。
+  - type: hr
+  pager: 从中文开始
+- file: jp/l1/page-2.md
+  title: 换了位置，怎么知道谁在看？
+  head: 第一课 · 换了位置，怎么知道谁在看？
+  blocks:
+  - type: para
+    text: 我们来设计一个特别简单的小游戏。**不是真正的中文，也还不是日语。**
+  - type: para
+    text: 游戏只有三种词：**“我”“狗”“看见”**。
+  - type: list
+    items:
+    - “看见”放在最后。
+    - “我”和“狗”可以交换位置。
+    - '**关键规则：不能再靠“谁排第一”判断谁在看。**'
+  - type: table
+    rows:
+    - - '**我　狗　看见**'
+      - 我看见了狗
+    - - '**狗　我　看见**'
+      - 也可能是我看见了狗
+    headers:
+    - 游戏里的说法
+    - 可能想表达的意思
+  - type: question
+    label: 想一想
+    num: '3'
+    text: 只看这三个词，听的人能确定到底谁看见谁吗？
+  - type: list
+    marker: checkbox
+    items:
+    - 能确定
+    - 不能确定
+  - type: para
+    text: 原来用中文语序判断的办法，在这个游戏里不够用了。我们缺少的是“谁在看、谁被看见”的线索。
+  - type: label
+    text: 给词语贴两张小纸条
+  - type: para
+    text: 给你一个小提示：可以在“我”和“狗”后面各贴一个**短记号**。
+  - type: para
+    text: 一种表示**看见的一方**，另一种表示**被看见的一方**。具体画什么，由你自己决定。
+  - type: list
+    items:
+    - 我选 [[blank]] 表示“看见的一方”。（可以画 ○、☆、△……）
+    - 我选 [[blank]] 表示“被看见的一方”。（请选另一个记号）
+  - type: question
+    label: 动手
+    num: '4'
+    text: 让这两句话都表示“我看见了狗”
+  - type: para
+    text: '**我（　　　）狗（　　　）看见**'
+  - type: para
+    text: '**狗（　　　）我（　　　）看见**'
+  - type: para
+    text: 检查一下：位置换了，但每一个记号有没有一直跟着它所表示的角色？
+  - type: hr
+  pager: 换了位置，怎么知道谁在看？
+- file: jp/l1/page-3.md
+  title: 原来日语也有类似的办法！
+  head: 第一课 · 原来日语也有类似的办法！
+  blocks:
+  - type: para
+    text: 现在揭晓真正的日语。先不用背写法，只看两种彩色的小词贴在哪里。
+  - type: label
+    text: 只认识三个词就够了：
+  - type: list
+    items:
+    - '**私（わたし）** · *watashi* = 我'
+    - '**犬（いぬ）** · *inu* = 狗'
+    - '**見た（みた）** · *mita* = 看见了'
+  - type: note
+    tone: green
+    title: 第一句
+    text: ''
+  - type: para
+    text: '**私[[g:が]]犬[[a:を]]見た。**'
+  - type: hint
+    text: watashi [[g:ga]] inu [[a:o]] mita.
+  - type: para
+    text: 我看见了狗。
+  - type: note
+    tone: green
+    title: 第二句
+    text: ''
+  - type: para
+    text: '**犬[[a:を]]私[[g:が]]見た。**'
+  - type: hint
+    text: inu [[a:o]] watashi [[g:ga]] mita.
+  - type: para
+    text: 仍然是我看见了狗。（表达重点略有不同。）
+  - type: question
+    label: 发现
+    num: '5'
+    text: 位置换了，为什么“谁在看”没有变？
+  - type: para
+    text: 看看每个名词后面的彩色小词。日语是靠哪些小词保留这个关系的？
+  - type: label
+    text: 现在请你亲手完成一次“交接”
+  - type: table
+    rows:
+    - - '[[blank]] 表示“看见的一方”'
+      - '[[blank]] （抄绿色的）'
+    - - '[[blank]] 表示“被看见的一方”'
+      - '[[blank]] （抄橙色的）'
+    headers:
+    - 我自己画的记号
+    - 真正的日语小词（亲手抄写）
+  - type: para
+    text: 前两格，请重画你在上一页选的记号；后两格，请亲手写下真正的日语。
+  - type: para
+    text: '**交接完成！** 你自己发现的办法没有消失，只是换成了日语使用的真实形式。'
+  - type: para
+    text: '**从下一题起，不再用自己画的符号。**'
+  - type: question
+    label: 动手
+    num: '6'
+    text: 现在只用日语的小词，补全“我看见了狗”
+  - type: para
+    text: '**私（　　　）犬（　　　）見た。**'
+  - type: hint
+    text: 需要提示？绿色的是「が」，橙色的是「を」。这次只填写日语。
+  - type: hr
+  pager: 原来日语也有类似的办法！
+- file: jp/l1/page-4.md
+  title: 你已经可以读懂新句子了吗？
+  head: 第一课 · 你已经可以读懂新句子了吗？
+  blocks:
+  - type: para
+    text: 现在不再使用自己发明的符号，也暂时不加颜色，看看你能不能靠真正的日语判断意思。
+  - type: para
+    text: 只加一个新词：**猫（ねこ）** · *neko* = 猫。
+  - type: para
+    text: '**猫を犬が見た。**'
+  - type: hint
+    text: neko o inu ga mita.
+  - type: para
+    text: 这句话的中文意思，先由你来判断。
+  - type: question
+    label: 预测
+    num: '7'
+    text: 到底是谁看见了谁？
+  - type: list
+    marker: checkbox
+    items:
+    - 猫看见了狗
+    - 狗看见了猫
+    - 不确定
+  - type: hint
+    text: 想不出来？去找日语中“跟在猫后面”和“跟在狗后面”的小词。别只按中文词序猜。
+  - type: para
+    text: '**你为什么这样判断？请用一句话说说。**'
+  - type: write
+    label: ''
+    lines: 1
+  - type: question
+    label: 回顾
+    num: '8'
+    text: 今天你是怎样发现这条日语规律的？
+  - type: para
+    text: 可以想一想：我们先遇到什么困难？你做了什么？最后怎样检查？
+  - type: write
+    label: ''
+    lines: 1
+  - type: question
+    label: 好奇
+    num: '9'
+    text: 今天学完，你还想问什么？
+  - type: write
+    label: ''
+    lines: 1
+  - type: para
+    text: '**今天带走的，不只是两个日语小词。** 你发现了：当一种表达办法不够用时，可以寻找别的办法，再拿真实例句来检验。'
+  - type: hint
+    text: 今天看到的是「が」「を」在这些简单句里的用法。它们还有更多功能，以后再逐步发现。
+  pager: 你已经可以读懂新句子了吗？

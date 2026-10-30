@@ -1,6 +1,9 @@
 # 打包产物
 lesson0-site.zip
 
+# 稿件渲染出来的对比图（可随时用 tools/render_probe.py 重新生成）
+design/probe/
+
 # Windows 目录杂项
 Thumbs.db
 desktop.ini

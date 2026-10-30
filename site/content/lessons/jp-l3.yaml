@@ -1,0 +1,337 @@
+# 本文件由 tools/import_lessons.py 从 原始讲义 Markdown 自动生成，可手工修改。
+id: jp-l3
+course: jp
+title: 第三课 · 看起来很像，就一定按同一条规则变化吗？
+overview:
+  title: 第三课 · 学生版 · 概览与用法
+  lead: 共 6 页，每页一个观察。这一课不背词条：先写下自己的想法，再翻到下一页核对。
+  blocks:
+  - type: note
+    title: 怎么用
+    text: '**每一页都先写下自己的想法，再翻到下一页。** 空白处不是装饰，是这一课真正要产出的东西：你的问题，和你打算怎么检验它。'
+  - type: pagelist
+    items:
+    - num: '1'
+      title: 从第二课留下的问题出发
+      desc: ''
+      to: jp/l3/page-1.md
+    - num: '2'
+      title: 找一个“看起来很像”的新词
+      desc: ''
+      to: jp/l3/page-2.md
+    - num: '3'
+      title: 结果和你想的一样吗？
+      desc: ''
+      to: jp/l3/page-3.md
+    - num: '4'
+      title: 它们会不会分成两个“家族”？
+      desc: ''
+      to: jp/l3/page-4.md
+    - num: '5'
+      title: 你的办法能预测新词吗？
+      desc: ''
+      to: jp/l3/page-5.md
+    - num: '6'
+      title: 核对，修正，然后由你继续
+      desc: ''
+      to: jp/l3/page-6.md
+  - type: download
+    tone: amber
+    title: 打印版
+    text: 同一份讲义另有可打印的 PDF（A4，6 页）。浏览器里直接打印也可以，页面已按讲义排版。作者 SL，内容以 CC BY-NC-SA 4.0 授权。
+    to: assets/downloads/lesson3-jp-student-v1.pdf
+    label: 下载学生版 PDF（A4 · 6 页）
+  - type: hr
+  - type: foot
+    text: 第三课 · 看起来很像，就一定按同一条规则变化吗？ · 学生讲义 v1 · 中文母语者学习日语 · 作者 SL
+pages:
+- file: jp/l3/page-1.md
+  title: 从第二课留下的问题出发
+  head: 第三课 · 从第二课留下的问题出发
+  blocks:
+  - type: note
+    tone: green
+    title: ''
+    text: 中文母语者学习日语 · 学生版 v1 先写下自己的猜想，再翻到下一页核对。你不必每次猜对，也不必问出老师预设的问题。
+  - type: para
+    text: 上一课，我们发现了三组真实的日语词。**左边是原来的形式，右边是过去的形式**：
+  - type: table
+    rows:
+    - - '**見る**（みる / miru）'
+      - '**見た**（みた / mita）'
+      - 看 → 看了
+    - - '**食べる**（たべる / taberu）'
+      - '**食べた**（たべた / tabeta）'
+      - 吃 → 吃了
+    - - '**帰る**（かえる / kaeru）'
+      - '**帰った**（かえった / kaetta）'
+      - 回去 → 回去了
+    headers:
+    - 原来的形式
+    - 过去的形式
+    - 中文意思
+  - type: ask
+    label: 观察 1
+    text: 这三组词有什么共同点？又有什么不同？
+  - type: write
+    label: 我的观察：
+    lines: 1
+  - type: ask
+    label: 我的问题 2
+    text: 如果由你决定下一步研究什么，你想问什么？
+  - type: write
+    label: 我的问题：
+    lines: 1
+  - type: para
+    text: '**问题从哪里来？** 是哪一组词或哪种差别，让你想到这个问题？'
+  - type: write
+    label: 我的理由：
+    lines: 1
+  - type: note
+    tone: green
+    title: ''
+    text: 先保留你的问题。如果你暂时没有想到，老师可以给一点线索。下面提供的是其中一条可以继续探索的路线，不要求你放弃自己的问题。
+  pager: 从第二课留下的问题出发
+- file: jp/l3/page-2.md
+  title: 找一个“看起来很像”的新词
+  head: 第三课 · 找一个“看起来很像”的新词
+  blocks:
+  - type: para
+    text: 你已经知道：**見る（みる / miru）→ 見た（みた / mita）**。
+  - type: label
+    text: 现在有一个新词：
+  - type: table
+    rows:
+    - - '**切る**'
+      - きる / kiru
+      - 切、剪
+    headers:
+    - 新词
+    - 读音
+    - 意思
+  - type: ask
+    label: 观察 3
+    text: '`miru` 和 `kiru` 的结尾是不是很像？如果只看它们的读音，能不能想到一个猜法？'
+  - type: ask
+    label: 预测 4
+    text: 如果“切了／剪了”要用过去的形式，你猜 **切る** 会变成什么？
+  - type: write
+    label: 我猜：
+    lines: 1
+  - type: ask
+    label: 依据 5
+    text: 你为什么这样猜？你是拿它和哪个旧词比较的？
+  - type: write
+    label: 我的依据：
+    lines: 1
+  - type: list
+    marker: checkbox
+    label: 把握：
+    items:
+    - 很有把握
+    - 有一点把握
+    - 还不确定
+  - type: ask
+    label: 翻页之前，再问自己一句
+    text: 如果我猜错了，究竟说明哪一条原来的想法可能需要修改？
+  - type: write
+    label: ''
+    lines: 1
+  - type: note
+    tone: green
+    title: ''
+    text: 没有把握也没关系。能够说清楚“我依据什么猜、哪里还不确定”，比盲目写一个答案更重要。
+  pager: 找一个“看起来很像”的新词
+- file: jp/l3/page-3.md
+  title: 结果和你想的一样吗？
+  head: 第三课 · 结果和你想的一样吗？
+  blocks:
+  - type: label
+    text: 现在才揭晓真实日语：
+  - type: table
+    rows:
+    - - '**見る**（miru）'
+      - '**見た**（mita）'
+      - 看 → 看了
+    - - '**切る**（kiru）'
+      - '**切った**（kitta）'
+      - 切 → 切了
+    headers:
+    - 原来的形式
+    - 过去的形式
+    - 中文意思
+  - type: para
+    text: 两个词都以 **-iru** 的声音结尾，但过去形式并不一样。
+  - type: ask
+    label: 核对 6
+    text: 你的预测对了吗？这个新事实支持了你原来哪部分想法，又否定了哪部分？
+  - type: write
+    label: ''
+    lines: 1
+  - type: ask
+    label: 修正 7
+    text: 现在，请把原来的想法改得更准确一点。可以用自己的话，不必使用语法术语。
+  - type: write
+    label: 我目前认为：
+    lines: 1
+  - type: write
+    label: ''
+    lines: 1
+  - type: label
+    text: 暂时别急着问老师“正确规则是什么”
+  - type: ask
+    label: 我的新问题 8
+    text: 你还想比较哪两个词，来判断这到底是偶然差异，还是两种可以重复出现的变化方式？
+  - type: write
+    label: 我想比较：
+    lines: 1
+  - type: note
+    tone: green
+    title: ''
+    text: 下一页我们把已经知道的四组词放到一起。看看能不能找到比“都以 る 结尾”更有用的分类。
+  pager: 结果和你想的一样吗？
+- file: jp/l3/page-4.md
+  title: 它们会不会分成两个“家族”？
+  head: 第三课 · 它们会不会分成两个“家族”？
+  blocks:
+  - type: para
+    text: 这些例子都是真的。先不要看语法书，请你尝试整理一下。
+  - type: table
+    rows:
+    - - '**見る**（miru）'
+      - '**見た**（mita）'
+    - - '**食べる**（taberu）'
+      - '**食べた**（tabeta）'
+    - - '**帰る**（kaeru）'
+      - '**帰った**（kaetta）'
+    - - '**切る**（kiru）'
+      - '**切った**（kitta）'
+    headers:
+    - 原来的形式
+    - 过去的形式
+  - type: ask
+    label: 整理 9
+    text: 如果按“变化的方式”分成两组，你会怎样分？
+  - type: write
+    label: 第一组：
+    lines: 1
+  - type: write
+    label: 第二组：
+    lines: 1
+  - type: ask
+    label: 归纳 10
+    text: 每一组分别出现了什么变化？你可以给这两组取两个自己的名字。
+  - type: write
+    label: 第一组的变化：
+    lines: 1
+  - type: write
+    label: 第二组的变化：
+    lines: 1
+  - type: ask
+    label: 再想一步 11
+    text: 仅凭一个词以 `る` 结尾，或者读音以 `-iru / -eru` 结尾，你能百分之百判断它属于哪一组吗？为什么？
+  - type: write
+    label: ''
+    lines: 1
+  - type: note
+    tone: green
+    title: ''
+    text: 这一次，学会承认“还无法确定”也是进步。下一页我们再看两个新词，检验你整理的办法。
+  pager: 它们会不会分成两个“家族”？
+- file: jp/l3/page-5.md
+  title: 你的办法能预测新词吗？
+  head: 第三课 · 你的办法能预测新词吗？
+  blocks:
+  - type: para
+    text: 下面有两个你还没检验过的日语词。
+  - type: table
+    rows:
+    - - '**寝る**'
+      - ねる / neru
+      - 睡觉
+    - - '**走る**'
+      - はしる / hashiru
+      - 跑
+    headers:
+    - 新词
+    - 读音
+    - 中文意思
+  - type: ask
+    label: 预测 12
+    text: 如果要表达过去的“睡了”和“跑了”，你分别会怎样写？
+  - type: list
+    items:
+    - 寝る → [[blank]]
+    - 走る → [[blank]]
+  - type: ask
+    label: 理由 13
+    text: 你的预测依据是什么？两个词的证据一样充分吗？
+  - type: write
+    label: ''
+    lines: 1
+  - type: ask
+    label: 判断 14
+    text: 如果单靠目前的例子还不能保证答对，你可以采取什么办法查证？
+  - type: write
+    label: 我准备向老师、词典或 AI 查：
+    lines: 1
+  - type: ask
+    label: 我的主动问题 15
+    text: 除了这两个词，你自己还想拿什么新词来验证？
+  - type: write
+    label: ''
+    lines: 1
+  - type: note
+    tone: green
+    title: ''
+    text: 先写好，再翻页。预测不是考试：成功让我们更有把握；失败帮助我们发现模型的边界。
+  pager: 你的办法能预测新词吗？
+- file: jp/l3/page-6.md
+  title: 核对，修正，然后由你继续
+  head: 第三课 · 核对，修正，然后由你继续
+  blocks:
+  - type: label
+    text: 真实日语是：
+  - type: table
+    rows:
+    - - '**寝る**（ねる / neru）'
+      - '**寝た**（ねた / neta）'
+      - 睡 → 睡了
+    - - '**走る**（はしる / hashiru）'
+      - '**走った**（はしった / hashitta）'
+      - 跑 → 跑了
+    headers:
+    - 原来的形式
+    - 过去的形式
+    - 中文意思
+  - type: para
+    text: 现在你至少看到了两种**可以在多个词上重复出现**的变化方式。
+  - type: ask
+    label: 核对 16
+    text: 你的两次预测分别怎样？哪一组又增加了一个支持例子？
+  - type: write
+    label: ''
+    lines: 1
+  - type: ask
+    label: 我的暂时结论 17
+    text: 请用两句话总结你今天真正知道了什么、还不能确定什么。
+  - type: list
+    items:
+    - 我已经有证据认为：[[blank]]
+    - 但我还不能仅凭 [[blank]] 就确定 [[blank]]
+  - type: label
+    text: 这次由你决定接下来查什么
+  - type: write
+    label: 我自己提出的问题 18：
+    lines: 1
+  - type: write
+    label: 我想用来检验的例子或资料 19：
+    lines: 1
+  - type: write
+    label: 我希望 AI／老师帮我做的事 20：
+    lines: 1
+  - type: note
+    tone: green
+    title: ''
+    text: 小提醒：日语动词有可学习的变化类别，所以并不是随意乱变；但是只看末尾的 `る`，并不能可靠地确定所有词的类别。有些具体词的归属需要通过真实词汇或词典确认。今天不背完整变化表，也不要求你记住全部新词。
+  pager: 核对，修正，然后由你继续

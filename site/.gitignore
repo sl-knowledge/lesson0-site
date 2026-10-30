@@ -3,11 +3,17 @@ _site/
 
 # 由 tools/build_content.py 从 content/*.yaml 生成
 docs/index.md
+docs/jp/
+docs/en/
 docs/student/
 docs/teacher/
 
 # 由 tools/hooks.py 从仓库根目录的 LICENSE 同步
 docs/assets/downloads/LICENSE.txt
+
+# 自检与排版调试产物
+design/shots/
+design/*.txt
 
 # Python
 __pycache__/

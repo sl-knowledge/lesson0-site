@@ -1,42 +1,59 @@
-# 首页内容真源
-title: 第零课 · 同一个声音，可以怎么写？
-
+title: 先观察，再提问
 cover:
-  eyebrow: 第零课 · 中文母语者学习日语 · 试教稿 v1
-  title: 同一个声音，可以怎么写？
-  lead: 今天不背日语词，也不背五十音。做几个小观察，看看一种语言的声音可以怎样写下来——然后，把“下一个问题”交给你自己提出。
+  eyebrow: 中文母语者学习语言 · 观察式试教站点
+  title: 先观察，再提问
+  lead: 每一课都不背词条：从你每天都在用的母语出发，先做一点观察，再提出自己的问题，然后拿真实的材料去检验它。
 
 blocks:
-  - type: buttons
-    items:
-      - {text: 进入学生版 · 6 页, to: student/index.md, primary: true}
-      - {text: 下载打印版 PDF, to: assets/downloads/lesson0-student-handout-v1.pdf, asset: true}
+  - type: heading
+    level: 2
+    text: 日语课程
+  - type: para
+    text: 四节课，一条主线：同一个声音能写成几种样子 → 换了位置怎么知道谁在看 → 自己提出的问题怎么检验 → 看起来很像的词，是不是同一条规则。
+  - type: linkcard
+    eyebrow: 日语 · 第零课
+    title: 同一个声音，可以怎么写？
+    desc: 6 页学生讲义 · 从「quánlì」三种写法开始认识日语的表音与表意
+    to: jp/l0/index.md
+  - type: linkcard
+    eyebrow: 日语 · 第一课
+    title: 一句话，为什么能有不同说法？
+    desc: 4 页学生讲义 · 从中文语序走到日语的「が」「を」，并完成一次符号交接
+    to: jp/l1/index.md
+  - type: linkcard
+    eyebrow: 日语 · 第二课
+    title: 你发现了一个新问题吗？
+    desc: 6 页学生讲义 · 先写预测再核对，把「我发现了什么」变成「我该问什么」
+    to: jp/l2/index.md
+  - type: linkcard
+    eyebrow: 日语 · 第三课
+    title: 看起来很像，就一定按同一条规则变化吗？
+    desc: 6 页学生讲义 · 自己挑对照词、自己提可检验的问题、自己修正原来的想法
+    to: jp/l3/index.md
 
   - type: heading
     level: 2
-    text: 这一课在做什么
-  - type: cards
-    cols: 3
-    items:
-      - big: 观察
-        label: 同一个声音可以有三种写法：inu、いぬ、イヌ。
-      - big: 工具
-        label: 汉字不记读音，但能帮读者分清同音词：記者／汽車。
-      - big: 交棒
-        label: 第三页停下来，由你自己提出下一个问题，并说清怎么检验它。
+    text: 英语课程
+  - type: para
+    text: 从中文出发，看英语的句子是怎么搭起来的：不背单词，先看清骨架。
+  - type: linkcard
+    eyebrow: 英语 · 第一课
+    title: 英语为什么非要「造」一个主语？
+    desc: 3 页学生讲义 · 用骨架规则造句，并判断一条规则是不是「你真的接受」
+    to: en/l1/index.md
 
   - type: heading
     level: 2
     text: 给老师
   - type: linkcard
-    to: teacher/guide.md
-    eyebrow: 教师区 · 仅教师
-    title: 教师用：问题生成支架与核查
-    desc: 本课真正的学习目标、教师后台的知识与纪律、支架阶梯、课堂观察清单与事实核验出处。站点是纯静态页面，没有访问控制，请勿向学生投屏或分发该链接。
+    eyebrow: 仅教师
+    title: 教师区
+    desc: 每一课的预设教学路径、逐级提示与示范答案
+    to: teacher/index.md
   - type: note
     tone: amber
-    title: 学生版与教师版分开
-    text: 学生版六页只呈现材料与问题，不含任何预设路径、提示或示范答案；教师内容全部收在独立的“教师区”里。
+    title: 教师区没有访问控制
+    text: 站点是纯静态页面：任何拿到链接的人都能打开教师区。请勿投屏，也不要分发相关链接。
 
   - type: heading
     level: 2
@@ -59,4 +76,4 @@ blocks:
     items:
       - {text: 许可协议全文, to: assets/downloads/LICENSE.txt, asset: true}
   - type: foot
-    text: 第零课 · 试教稿 v1 · 作者 SL · MkDocs + Material 构建
+    text: 第零课～第三课 · 英语第一课 · 作者 SL · MkDocs + Material 构建

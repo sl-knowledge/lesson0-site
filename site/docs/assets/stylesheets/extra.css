@@ -344,6 +344,55 @@ input {
   color: var(--l0-ink);
 }
 
+/* 小标题：一段内容的引导句，如「再观察：」 */
+.l0-label {
+  font-weight: 700;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--l0-ink);
+  margin: 1.5rem 0 0.3rem;
+}
+
+/* 行内粗体标签 + 问题：原稿里「观察 3：……」的写法 */
+.l0-ask {
+  margin: 0.75rem 0 0.15rem;
+  line-height: 1.75;
+  color: var(--l0-ink-2);
+}
+
+.l0-ask__label {
+  font-weight: 700;
+  color: var(--l0-ink);
+}
+
+/* 步骤条：徽章 + 标题，如「第 2 步 · 换个角度想一想」 */
+.l0-step {
+  display: flex;
+  gap: 0.55rem;
+  align-items: baseline;
+  margin: 1.6rem 0 0.3rem;
+}
+
+.l0-step .l0-badge {
+  margin-top: 0;
+}
+
+.l0-step__title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--l0-ink);
+}
+
+/* 行内空白：表格单元格里给学生填的地方 */
+.l0-blank {
+  display: inline-block;
+  min-width: 7.5em;
+  height: 1.05em;
+  border-bottom: 1px solid var(--l0-dash);
+  vertical-align: baseline;
+}
+
 .l0-rules {
   margin: 0.9rem 0 1.1rem;
 }
@@ -365,6 +414,15 @@ input {
 .l0-write__label {
   font-size: 0.92rem;
   color: var(--l0-muted);
+}
+
+.l0-write__label--inline {
+  margin: 0.1rem 0 0.2rem;
+}
+
+.l0-list__label {
+  color: var(--l0-ink-2);
+  align-self: center;
 }
 
 .l0-write__rule {
@@ -399,6 +457,14 @@ input {
   font-weight: 700;
   color: var(--l0-ink);
   margin-bottom: 0.2rem !important;
+}
+
+/* 灰色小字提示 */
+.l0-hint {
+  font-size: 0.9rem;
+  color: var(--l0-muted);
+  line-height: 1.75;
+  margin: 0.1rem 0 0.9rem;
 }
 
 .l0-hr {
@@ -453,21 +519,26 @@ input {
 
 .l0-list {
   margin: 0.8rem 0 1.3rem;
-  padding-left: 1.3rem;
+  padding-left: 1.3rem !important;
 }
 
 .l0-list li {
   margin-bottom: 0.45rem;
 }
 
+/* Material 给 .md-typeset ul/ol 设了 display:flow-root、padding:0、list-style:disc，
+   优先级比类选择器高；勾选清单要横排、列表要有缩进，必须显式压过去。 */
 .l0-list--check {
-  list-style: none;
-  padding-left: 0.2rem;
+  display: flex !important;
+  list-style: none !important;
+  padding-left: 0.2rem !important;
+  flex-wrap: wrap;
+  gap: 0.1rem 1.5rem;
 }
 
 .l0-list--check li {
   position: relative;
-  padding-left: 1.7rem;
+  padding-left: 1.5rem;
 }
 
 .l0-list--check li::before {
@@ -476,6 +547,16 @@ input {
   left: 0;
   top: 0.05rem;
   color: var(--l0-ink);
+}
+
+/* 有序清单 */
+.l0-list--ordered {
+  list-style: decimal !important;
+  padding-left: 1.6rem !important;
+}
+
+.l0-list--ordered li {
+  margin-bottom: 0.45rem;
 }
 
 /* ------------------------------------------------------------------ *
@@ -939,8 +1020,167 @@ input {
     display: none;
   }
 
+  /* 新课讲义内容更密，打印时再收紧一档，保证每个学生页正好一张 A4 */
+  .l0-para {
+    margin-bottom: 0.35rem;
+  }
+
+  .l0-label {
+    font-size: 0.98rem;
+    margin: 0.6rem 0 0.1rem;
+  }
+
+  .l0-step {
+    margin: 0.8rem 0 0.15rem;
+  }
+
+  .l0-step__title {
+    font-size: 1rem;
+  }
+
+  .l0-hint {
+    margin: 0 0 0.45rem;
+  }
+
+  .l0-hr {
+    margin: 0.9rem 0;
+  }
+
+  .l0-list {
+    margin: 0.4rem 0 0.6rem;
+  }
+
+  .l0-list li {
+    margin-bottom: 0.24rem;
+  }
+
+  .l0-tablewrap {
+    margin: 0.4rem 0 0.7rem;
+  }
+
+  .l0-table {
+    font-size: 0.86rem;
+  }
+
+  .l0-table th,
+  .l0-table td {
+    padding: 0.32rem 0.55rem;
+    line-height: 1.6;
+  }
+
+  .l0-blank {
+    min-width: 6.5em;
+    height: 0.95em;
+  }
+
+  .l0-rules {
+    margin: 0.35rem 0 0.5rem;
+  }
+
+  .l0-rule {
+    margin-bottom: 0.6rem;
+  }
+
+  /* 学生页再压一档：保证每个学生页正好印在一张 A4 上 */
+  .l0-page--student {
+    line-height: 1.5;
+  }
+
+  .l0-page--student h1 {
+    font-size: 1.42rem;
+    margin: 0 0 0.35rem;
+  }
+
+  .l0-page--student .l0-lead {
+    font-size: 0.98rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .l0-page--student .l0-para {
+    margin-bottom: 0.3rem;
+    line-height: 1.5;
+  }
+
+  .l0-page--student .l0-label {
+    font-size: 0.95rem;
+    margin: 0.5rem 0 0.05rem;
+  }
+
+  .l0-page--student .l0-ask {
+    margin: 0.45rem 0 0.1rem;
+    line-height: 1.55;
+  }
+
+  .l0-page--student .l0-step {
+    margin: 0.6rem 0 0.1rem;
+  }
+
+  .l0-page--student .l0-step__title {
+    font-size: 0.98rem;
+  }
+
+  .l0-page--student .l0-q {
+    margin: 0.5rem 0 0.05rem;
+  }
+
+  .l0-page--student .l0-q__text {
+    font-size: 0.96rem;
+    line-height: 1.5;
+  }
+
+  .l0-page--student .l0-badge {
+    font-size: 0.74rem;
+    line-height: 1.6;
+  }
+
+  .l0-page--student .l0-note {
+    margin: 0.5rem 0;
+    padding: 0.45rem 0.7rem;
+    line-height: 1.5;
+  }
+
+  .l0-page--student .l0-hint {
+    font-size: 0.84rem;
+    margin: 0 0 0.35rem;
+  }
+
+  .l0-page--student .l0-list {
+    margin: 0.3rem 0 0.45rem;
+  }
+
+  .l0-page--student .l0-list li {
+    margin-bottom: 0.18rem;
+    line-height: 1.5;
+  }
+
+  .l0-page--student .l0-tablewrap {
+    margin: 0.3rem 0 0.5rem;
+  }
+
+  .l0-page--student .l0-table {
+    font-size: 0.82rem;
+  }
+
+  .l0-page--student .l0-table th,
+  .l0-page--student .l0-table td {
+    padding: 0.28rem 0.5rem;
+    line-height: 1.45;
+  }
+
+  .l0-page--student .l0-rules {
+    margin: 0.25rem 0 0.35rem;
+  }
+
+  .l0-page--student .l0-rule {
+    margin-bottom: 0.45rem;
+  }
+
+  .l0-page--student .l0-hr {
+    margin: 0.7rem 0;
+  }
+
   @page {
     size: A4;
-    margin: 14mm 13mm;
+    margin: 12mm 12mm;
   }
 }

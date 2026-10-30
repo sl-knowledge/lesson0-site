@@ -1,0 +1,54 @@
+# 课程与讲义总表：决定导航、首页课程门户与教师区首页的内容顺序。
+#
+# 每节课：
+#   content        —— 学生讲义的内容文件（content/ 目录下的相对路径）
+#   overview_file  —— 概览页在 docs/ 里的路径（可省略，由页面路径推出）
+#   teacher        —— 教师页的内容文件
+#
+# 学生讲义页面的路径写在各自的内容文件里（pages[].file）。
+
+courses:
+  - id: jp
+    label: 日语
+    title: 日语课程
+    lessons:
+      - id: jp-l0
+        label: 第零课
+        content: student.yaml
+        overview_file: jp/l0/index.md
+        teacher: teacher.yaml
+        teacher_desc: 11 个问题从哪来、怎么按学生的回答分诊，以及不该提前说的三件事。
+      - id: jp-l1
+        label: 第一课
+        content: lessons/jp-l1.yaml
+        teacher: lessons/jp-l1-teacher.yaml
+        teacher_desc: 认知衔接、符号交接与自主问题生成。
+      - id: jp-l2
+        label: 第二课
+        content: lessons/jp-l2.yaml
+        teacher: lessons/jp-l2-teacher.yaml
+        teacher_desc: 学生自主问题生成与分级支架。
+      - id: jp-l3
+        label: 第三课
+        content: lessons/jp-l3.yaml
+        teacher: lessons/jp-l3-teacher.yaml
+        teacher_desc: 从相似处找规律，也要检验边界。
+  - id: en
+    label: 英语
+    title: 英语课程
+    lessons:
+      - id: en-l1
+        label: 英语第一课
+        content: lessons/en-l1.yaml
+        teacher: lessons/en-l1-teacher.yaml
+        teacher_desc: 骨架规则、内部合理性与真心接受。
+
+teacher_index:
+  file: teacher/index.md
+  title: 教师区（仅教师）
+  lead: 这一区是课程的后台：每一课的预设教学路径、逐级提示与示范答案。学生不应预先看到这里的内容。
+  blocks:
+    - type: banner
+      tone: teacher
+      title: 仅教师使用 · 请勿投屏或分发本页链接
+      text: 本站是纯静态页面，没有访问控制。下面的每一页都包含预设路径与示范答案，请不要向学生投屏，也不要把链接发给学生。

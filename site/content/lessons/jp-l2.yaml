@@ -1,0 +1,168 @@
+# 本文件由 tools/import_lessons.py 从 原始讲义 Markdown 自动生成，可手工修改。
+id: jp-l2
+course: jp
+title: 第二课 · 你发现了一个新问题吗？
+overview:
+  title: 第二课 · 学生版 · 概览与用法
+  lead: 共 6 页，每页一个观察。这一课不背词条：先写下自己的想法，再翻到下一页核对。
+  blocks:
+  - type: note
+    title: 怎么用
+    text: '**每一页都先写下自己的想法，再翻到下一页。** 空白处不是装饰，是这一课真正要产出的东西：你的问题，和你打算怎么检验它。'
+  - type: pagelist
+    items:
+    - num: '1'
+      title: 两个以前见过的词
+      desc: ''
+      to: jp/l2/page-1.md
+    - num: '2'
+      title: 把疑问变成猜想
+      desc: ''
+      to: jp/l2/page-2.md
+    - num: '3'
+      title: 先预测，再查证
+      desc: ''
+      to: jp/l2/page-3.md
+    - num: '4'
+      title: 预测成功后，你还会问什么？
+      desc: ''
+      to: jp/l2/page-4.md
+    - num: '5'
+      title: 再检验一个新词
+      desc: ''
+      to: jp/l2/page-5.md
+    - num: '6'
+      title: 修正模型，自己开启下一轮
+      desc: ''
+      to: jp/l2/page-6.md
+  - type: download
+    tone: amber
+    title: 打印版
+    text: 同一份讲义另有可打印的 PDF（A4，6 页）。浏览器里直接打印也可以，页面已按讲义排版。作者 SL，内容以 CC BY-NC-SA 4.0 授权。
+    to: assets/downloads/lesson2-jp-student-v4.pdf
+    label: 下载学生版 PDF（A4 · 6 页）
+  - type: hr
+  - type: foot
+    text: 第二课 · 你发现了一个新问题吗？ · 学生讲义 v1 · 中文母语者学习日语 · 作者 SL
+pages:
+- file: jp/l2/page-1.md
+  title: 两个以前见过的词
+  head: 第二课 · 两个以前见过的词
+  blocks:
+  - type: note
+    tone: green
+    title: ''
+    text: 中文母语者学习日语 · 学生版 v4。按页学习，**先写预测，下一页再核对**。
+  - type: para
+    text: 第零课曾见过 **見る**（miru，看）。第一课曾见过 **見た**（mita，看见了／看了）。
+  - type: ask
+    label: 观察 1
+    text: 两个词哪里相同？哪里不同？
+  - type: ask
+    label: 你的问题
+    text: 如果让你继续研究，你最想弄清楚什么？
+  - type: ask
+    label: 追问 2
+    text: 你为什么想到这个问题？
+  - type: note
+    tone: green
+    title: ''
+    text: 不必问出老师预设的“标准问题”。先记录自己的问题，再看下一页。
+  - type: hr
+  pager: 两个以前见过的词
+- file: jp/l2/page-2.md
+  title: 把疑问变成猜想
+  head: 第二课 · 把疑问变成猜想
+  blocks:
+  - type: para
+    text: 保留上一页的问题。下面研究一个能用新例子检验的方向：
+  - type: list
+    items:
+    - '**私が犬を見る。**（watashi ga inu o miru.）我看狗。（非过去，可用于平时或将来，依语境决定）'
+    - '**私が犬を見た。**（watashi ga inu o mita.）我看了狗。（过去）'
+  - type: ask
+    label: 观察 3
+    text: 哪些部分没有改变？哪里真正发生变化？
+  - type: ask
+    label: 猜想 4
+    text: 根据这两个例子，你觉得日语可能怎样区分动作发生的时间？写出你的临时猜想。
+  - type: hr
+  pager: 把疑问变成猜想
+- file: jp/l2/page-3.md
+  title: 先预测，再查证
+  head: 第二课 · 先预测，再查证
+  blocks:
+  - type: para
+    text: 第零课见过 **食べる**（taberu），意思是“吃”。
+  - type: ask
+    label: 预测 5
+    text: 如果要表示过去的“吃了”，按你的猜想日语可能怎样写？
+  - type: ask
+    label: 理由 6
+    text: 你为什么这样猜？它与哪个旧例子有共同点？
+  - type: note
+    tone: green
+    title: ''
+    text: 先保留预测，下一页才公布真实答案。预测成功或失败都能带来信息。
+  - type: hr
+  pager: 先预测，再查证
+- file: jp/l2/page-4.md
+  title: 预测成功后，你还会问什么？
+  head: 第二课 · 预测成功后，你还会问什么？
+  blocks:
+  - type: para
+    text: 真实日语是 **食べる → 食べた**（taberu → tabeta），吃 → 吃了（过去）。
+  - type: ask
+    label: 核对 7
+    text: 预测相同吗？如果相同，你的猜想至少在几个词上得到支持？
+  - type: para
+    text: '**你接下来想问什么？** 一个新例子支持某种猜想后，你还想研究什么？'
+  - type: ask
+    label: 设计 8
+    text: 你想找哪一种新例子，判断你的猜想是否总能成立？
+  - type: note
+    tone: green
+    title: ''
+    text: 你的问题可以和下一页的材料不同，先记录下来。
+  - type: hr
+  pager: 预测成功后，你还会问什么？
+- file: jp/l2/page-5.md
+  title: 再检验一个新词
+  head: 第二课 · 再检验一个新词
+  blocks:
+  - type: para
+    text: 新词：**帰る**（kaeru），回去／返回。它也以 **る** 结尾。
+  - type: ask
+    label: 预测 9
+    text: “回去了”（过去）会怎样写？
+  - type: ask
+    label: 判断 10
+    text: 你为什么这样猜？有多少把握？“还不确定”也是合理判断。
+  - type: note
+    tone: green
+    title: ''
+    text: 先写下预测，再翻下一页核对。
+  - type: hr
+  pager: 再检验一个新词
+- file: jp/l2/page-6.md
+  title: 修正模型，自己开启下一轮
+  head: 第二课 · 修正模型，自己开启下一轮
+  blocks:
+  - type: para
+    text: 真实的日语：**帰る → 帰った**（kaeru → kaetta），回去 → 回去了（过去）。
+  - type: para
+    text: 对比之前：**見る → 見た**；**食べる → 食べた**。
+  - type: ask
+    label: 修正 11
+    text: 你最初的猜想，哪部分还成立？哪部分需要修改？
+  - type: ask
+    label: 我的问题 12
+    text: 现在你最想继续研究什么？
+  - type: ask
+    label: 我的检验 13
+    text: 你想比较哪些新词？准备向老师、词典或 AI 查证什么？
+  - type: note
+    tone: green
+    title: ''
+    text: 这节课真正带走的是：从已有知识生成问题、做出可检验的预测、核对真实例子、更新想法，并开启下一轮。日语非过去／过去与中文“了”不完全一对一，暂不学习完整变化表。
+  pager: 修正模型，自己开启下一轮

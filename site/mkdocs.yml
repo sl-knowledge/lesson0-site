@@ -1,9 +1,9 @@
-# 第零课站点配置
+# 站点配置：日语四课 + 英语第一课
 # 构建：python -m mkdocs build --strict  →  _site/
-site_name: 第零课 · 同一个声音，可以怎么写？
-site_description: 中文母语者学习日语 · 第零课试教站点（学生版 6 页 + 教师引导支架）
+site_name: 日语课程 & 英语第一课
+site_description: 中文母语者学习语言的观察式试教站点：日语四课 + 英语第一课，学生讲义与教师支架。
 site_author: SL
-copyright: © 2026 SL · 第零课 · 内容以 CC BY-NC-SA 4.0 授权
+copyright: © 2026 SL · 内容以 CC BY-NC-SA 4.0 授权
 
 docs_dir: docs
 site_dir: _site
@@ -82,13 +82,47 @@ not_in_nav: |
 
 nav:
   - 首页: index.md
-  - 学生版:
-      - 概览与用法: student/index.md
-      - 第 1 页 · 先从你熟悉的中文开始: student/page-1.md
-      - 第 2 页 · 同一个读音，可能有两个意思吗？: student/page-2.md
-      - 第 3 页 · 日语真的采用了类似的办法吗？: student/page-3.md
-      - 第 4 页 · 再看两个词，和刚才一样吗？: student/page-4.md
-      - 第 5 页 · 一个词，可以有多少种模样？: student/page-5.md
-      - 第 6 页 · 最后，一个小小的自测: student/page-6.md
+  - 日语课程:
+      - 第零课 · 同一个声音，可以怎么写？:
+          - 概览与用法: jp/l0/index.md
+          - 第 1 页 · 先从你熟悉的中文开始: jp/l0/page-1.md
+          - 第 2 页 · 同一个读音，可能有两个意思吗？: jp/l0/page-2.md
+          - 第 3 页 · 日语真的采用了类似的办法吗？: jp/l0/page-3.md
+          - 第 4 页 · 再看两个词，和刚才一样吗？: jp/l0/page-4.md
+          - 第 5 页 · 一个词，可以有多少种模样？: jp/l0/page-5.md
+          - 第 6 页 · 最后，一个小小的自测: jp/l0/page-6.md
+      - 第一课 · 一句话，为什么能有不同说法？:
+          - 概览与用法: jp/l1/index.md
+          - 第 1 页 · 从中文开始: jp/l1/page-1.md
+          - 第 2 页 · 换了位置，怎么知道谁在看？: jp/l1/page-2.md
+          - 第 3 页 · 原来日语也有类似的办法！: jp/l1/page-3.md
+          - 第 4 页 · 你已经可以读懂新句子了吗？: jp/l1/page-4.md
+      - 第二课 · 你发现了一个新问题吗？:
+          - 概览与用法: jp/l2/index.md
+          - 第 1 页 · 两个以前见过的词: jp/l2/page-1.md
+          - 第 2 页 · 把疑问变成猜想: jp/l2/page-2.md
+          - 第 3 页 · 先预测，再查证: jp/l2/page-3.md
+          - 第 4 页 · 预测成功后，你还会问什么？: jp/l2/page-4.md
+          - 第 5 页 · 再检验一个新词: jp/l2/page-5.md
+          - 第 6 页 · 修正模型，自己开启下一轮: jp/l2/page-6.md
+      - 第三课 · 看起来很像，就一定同一条规则吗？:
+          - 概览与用法: jp/l3/index.md
+          - 第 1 页 · 从第二课留下的问题出发: jp/l3/page-1.md
+          - 第 2 页 · 找一个“看起来很像”的新词: jp/l3/page-2.md
+          - 第 3 页 · 结果和你想的一样吗？: jp/l3/page-3.md
+          - 第 4 页 · 它们会不会分成两个“家族”？: jp/l3/page-4.md
+          - 第 5 页 · 你的办法能预测新词吗？: jp/l3/page-5.md
+          - 第 6 页 · 核对，修正，然后由你继续: jp/l3/page-6.md
+  - 英语课程:
+      - 英语第一课 · 英语为什么非要「造」一个主语？:
+          - 概览与用法: en/l1/index.md
+          - 第 1 页 · 先看四句中文: en/l1/page-1.md
+          - 第 2 页 · 一个游戏：用“骨架规则”说话: en/l1/page-2.md
+          - 第 3 页 · 原来，英语就是这样说的！: en/l1/page-3.md
   - 教师区（仅教师）:
-      - 教师引导与问题生成支架: teacher/guide.md
+      - 教师区首页: teacher/index.md
+      - 第零课 · 问题生成支架与核查: teacher/jp-l0.md
+      - 第一课 · 认知衔接、符号交接与自主问题生成: teacher/jp-l1.md
+      - 第二课 · 学生自主问题生成与分级支架: teacher/jp-l2.md
+      - 第三课 · 从相似处找规律，也要检验边界: teacher/jp-l3.md
+      - 英语第一课 · 骨架规则、内部合理性与真心接受: teacher/en-l1.md

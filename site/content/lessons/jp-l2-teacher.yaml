@@ -1,0 +1,77 @@
+# 本文件由 tools/import_lessons.py 从 原始讲义 Markdown 自动生成，可手工修改。
+id: jp-l2
+title: 第二课 · 教师用：学生自主问题生成与分级支架
+file: teacher/jp-l2.md
+lead: 这一页是第二课的教师后台：预设路径、逐级提示与示范答案。学生不应预先看到本页内容。
+blocks:
+- type: banner
+  tone: teacher
+  title: 仅教师使用 · 请勿投屏或分发本页链接
+  text: 本页包含预设教学路径、逐级提示与示范答案。站点是纯静态页面，没有访问控制：请不要向学生投屏此页，也不要把本页链接发给学生。
+- type: para
+  text: '**请不要把本文件的提示、预设问题和示范答案提前交给学生。**'
+- type: heading
+  level: 2
+  text: 与已学知识衔接
+- type: list
+  items:
+  - 第零课已经引入完整单词 `見る`、`食べる`，学生理解汉字与假名可以共同构成一个词。
+  - 第一课已经引入 `見た`、简单句的 `が`、`を`，且完成学生自创符号向真实日语符号的交接。
+  - 第二课不再重新解释“助词、平假名”；直接让学生从两个既有例子产生问题。
+- type: heading
+  level: 2
+  text: 教师后台需要知道的真实机制
+- type: list
+  items:
+  - '`見る → 見た`、`食べる → 食べた` 属于同一类动词，过去形可以去掉 `る` 换为 `た`。'
+  - '`帰る → 帰った` 虽然同样以 `る` 结尾，却属于另一类动词，过去形式按另一条规律变化；它**不是随机、不规则的孤例**。'
+  - 教师不要在第二课直接提供完整的动词分类表。学生先认识到原来假设的适用范围有限，下一课可用新材料继续探索分类依据。
+  - 日语非过去可以涵盖习惯和将来；中文“了”不等同于日语过去形，学生版的中文译文是简化的教学近似。
+- type: heading
+  level: 2
+  text: 两个关键的“问题交接点”
+- type: heading
+  level: 3
+  text: 交接点 A：学生版第 1 页
+- type: para
+  text: 先给 `見る / 見た` 和已知意思，让学生先写下自己观察到的差别以及**他真正想问的一个问题**。不要教师一开口就问“为什么日语动词有过去式？”
+- type: para
+  text: 按需逐级提示，一有自主回应就停止：
+- type: list
+  marker: ordered
+  items:
+  - '**轻提示：** “两个词有什么一样、有什么不同？”'
+  - '**较明确：** “写法变了，意思也有差别。你想知道它们有没有联系吗？”'
+  - '**半句：** “同一个‘看’，为什么后面……？”'
+  - '**最后示范：** 老师提供一个可检验的问题，再让学生自己提出一个相邻但不同的问题。'
+- type: heading
+  level: 3
+  text: 交接点 B：学生版第 4 页
+- type: para
+  text: 预测 `食べた` 后，**暂不展示 `帰る`**。让学生自己问“是否所有 る 结尾都一样？”或提出其他真实好奇的问题。然后鼓励他说明：要检验自己的猜想，想找什么新例子？
+- type: para
+  text: 如果学生问不出来：
+- type: list
+  marker: ordered
+  items:
+  - “你刚刚又看到了一个支持猜想的例子，接下来最想知道什么？”
+  - “你想找一个类似的词，还是一个可能不同的词来检验？”
+  - “你已知道两个词这样变化。那么，其他以 る 结尾的词是否也……？”
+  - 必要时示范，但明确标注是**老师提供的问题**，绝不冒充学生的发现。
+- type: para
+  text: 学生如果提出别的问题（例如 `が` / `を` 是否适用于其他句子，或为何有些日语词全部用假名），应记录为有效分支，并说明课程给出的 `帰る` 只是**一个可选检验材料**。
+- type: heading
+  level: 2
+  text: 课堂记录
+- type: para
+  text: 记录每个交接点的：学生原话、问题从何而来、是否先于提示提出、所需支架等级（自主 / 轻提示 / 半句 / 示范）、是否设计了可比较的新例子、核对后是否修改自己的猜想。
+- type: para
+  text: '**不要只按答对率评价。** 最关键的观察是：到第二个交接点，学生是否能用更少提示提出一个有依据、可以检验的问题。延迟几天换一组陌生词，再观察自主迁移。'
+- type: heading
+  level: 2
+  text: 研究事实核验（教师参考）
+- type: list
+  items:
+  - '[Mango Languages：日语动词类别](https://www.mangolanguages.com/resources/learn/grammar/japanese/what-are-the-verb-groups-in-japanese-)'
+  - '[Mango Languages：过去形式](https://www.mangolanguages.com/resources/learn/grammar/japanese/how-to-form-the-past-tense-in-japanese-)'
+  - '[JLPT N5 Grammar：三类动词](https://www.japanesejlpt.com/learn-japanese/n5-grammar/verb-groups/)'

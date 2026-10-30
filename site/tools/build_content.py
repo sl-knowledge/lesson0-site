@@ -36,19 +36,33 @@ TONE_CLASS = {
 _LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)\s]+)\)")
 _STRONG_RE = re.compile(r"\*\*(.+?)\*\*")
 _CODE_RE = re.compile(r"`([^`]+)`")
+_ITALIC_RE = re.compile(r"(?<![*\w])\*([^*\n]+)\*(?!\*)")
+# 行内彩色强调：[[g:が]] / [[a:を]] / [[b:き]]
+_COLOR_RE = re.compile(r"\[\[([gab]):([^\[\]]+)\]\]")
+COLOR_CLASS = {"g": "l0-t-ink", "a": "l0-t-amber", "b": "l0-t-blue"}
+# 行内空白：[[blank]]
+_BLANK_RE = re.compile(r"\[\[blank\]\]")
 
 
 # --------------------------------------------------------------------------- #
 # 行内格式化
 # --------------------------------------------------------------------------- #
 def inline(text: Any) -> str:
-    """把行内 Markdown（粗体、代码、链接）转成 HTML 片段。"""
+    """把行内 Markdown（粗体、斜体、代码、链接、彩色强调、空白）转成 HTML 片段。"""
     if text is None:
         return ""
     s = html.escape(str(text), quote=False)
     s = _STRONG_RE.sub(r"<strong>\1</strong>", s)
     s = _CODE_RE.sub(r"<code>\1</code>", s)
     s = _LINK_RE.sub(r'<a href="\2">\1</a>', s)
+    s = _COLOR_RE.sub(
+        lambda m: '<span class="{cls}">{text}</span>'.format(
+            cls=COLOR_CLASS.get(m.group(1), "l0-t-ink"), text=m.group(2)
+        ),
+        s,
+    )
+    s = _BLANK_RE.sub('<span class="l0-blank"></span>', s)
+    s = _ITALIC_RE.sub(r"<em>\1</em>", s)
     return s
 
 
@@ -172,7 +186,20 @@ def render_write(block: dict, ctx: dict = None) -> str:
         out.append(render_rules(block.get("lines", 1)))
         out.append("</div>")
         return "\n".join(out)
-    return render_rules(block.get("lines", 1))
+
+    # 无边框的书写区：标签与横线同一行，和讲义原稿一致
+    out = []
+    lines = max(1, int(block.get("lines", 1)))
+    if block.get("label"):
+        out.append(
+            '<div class="l0-write__label l0-write__label--inline">{0}'
+            '<span class="l0-write__rule"></span></div>'.format(inline(block["label"]))
+        )
+        if lines > 1:
+            out.append(render_rules(lines - 1))
+        return "\n".join(out)
+    out.append(render_rules(lines))
+    return "\n".join(out)
 
 
 def render_rules(lines: int) -> str:
@@ -185,9 +212,36 @@ def render_note(block: dict, ctx: dict = None) -> str:
     out = ['<div class="l0-note l0-note--{0}">'.format(tone)]
     if block.get("title"):
         out.append('<p class="l0-note__title">{0}</p>'.format(inline(block["title"])))
-    out.append('<p>{0}</p>'.format(inline(block.get("text", ""))))
+    if block.get("text"):
+        out.append('<p>{0}</p>'.format(inline(block["text"])))
     out.append("</div>")
     return "\n".join(out)
+
+
+def render_ask(block: dict, ctx: dict = None) -> str:
+    """行内粗体标签 + 问题：原稿里「观察 3：……」的写法。"""
+    return '<p class="l0-ask"><span class="l0-ask__label">{0}</span> {1}</p>'.format(
+        inline(block.get("label", "")), inline(block.get("text", ""))
+    )
+
+
+def render_label(block: dict, ctx: dict = None) -> str:
+    """小标题：一段内容的引导句，如「再观察：」。"""
+    return '<p class="l0-label">{0}</p>'.format(inline(block.get("text", "")))
+
+
+def render_step(block: dict, ctx: dict = None) -> str:
+    """步骤条：徽章 + 标题，如「第 2 步 · 换个角度想一想」。"""
+    out = ['<p class="l0-step"><span class="l0-badge">{0}</span>'.format(inline(block.get("label", "")))]
+    if block.get("title"):
+        out.append('<span class="l0-step__title">{0}</span>'.format(inline(block["title"])))
+    out.append("</p>")
+    return "".join(out)
+
+
+def render_hint(block: dict, ctx: dict = None) -> str:
+    """灰色小字提示。"""
+    return '<p class="l0-hint">{0}</p>'.format(inline(block.get("text", "")))
 
 
 def render_admonition(block: dict, ctx: dict = None) -> str:
@@ -226,11 +280,18 @@ def render_list(block: dict, ctx: dict = None) -> str:
     ctx = ctx or {}
     items = block.get("items", [])
     cls = "l0-list"
-    if block.get("marker") == "checkbox":
+    tag = "ul"
+    marker = block.get("marker")
+    if marker == "checkbox":
         cls += " l0-list--check"
-    out = ['<ul class="{0}">'.format(cls)]
+    elif marker == "ordered":
+        cls += " l0-list--ordered"
+        tag = "ol"
+    out = ['<{tag} class="{cls}">'.format(tag=tag, cls=cls)]
+    if block.get("label"):
+        out.append('<span class="l0-list__label">{0}</span>'.format(inline(block["label"])))
     out.extend("<li>{0}</li>".format(cell_html(item, ctx)) for item in items)
-    out.append("</ul>")
+    out.append("</{0}>".format(tag))
     return "\n".join(out)
 
 
@@ -404,6 +465,10 @@ RENDERERS = {
     "buttons": render_buttons,
     "download": render_download,
     "cover": lambda b, c: render_cover(b, c),
+    "label": render_label,
+    "ask": render_ask,
+    "step": render_step,
+    "hint": render_hint,
 }
 
 
@@ -481,58 +546,105 @@ def build_all(docs_dir: Path | None = None) -> list[Path]:
         )
     )
 
-    # ---- 学生版 -----------------------------------------------------------
-    student = load_yaml("student.yaml")
-    pages = student.get("pages", [])
-    total = len(pages)
+    # ---- 课程与讲义 -------------------------------------------------------
+    # courses.yaml 决定有哪些课、每课的学生讲义与教师页来自哪个内容文件
+    courses = load_yaml("courses.yaml")
+    teacher_cards: list[dict] = []
 
-    overview = student.get("overview")
-    if overview:
-        ctx = {"file": "student/index.md"}
-        inner = ["# {0}".format(overview["title"])]
-        if overview.get("lead"):
-            inner.append(render_para({"text": overview["lead"], "lead": True}))
-        inner.extend(render_blocks(overview.get("blocks", []), ctx))
-        written.append(
-            write_doc(
-                docs_dir,
-                "student/index.md",
-                page_document(
-                    overview["title"], [wrap_page(inner, "l0-page--student")], "content/student.yaml"
-                ),
+    for course in courses.get("courses", []):
+        for lesson in course.get("lessons", []):
+            student = load_yaml(lesson["content"])
+            pages = student.get("pages", [])
+            total = len(pages)
+
+            overview = student.get("overview")
+            if overview:
+                overview_file = lesson.get("overview_file") or overview_file_of(pages)
+                ctx = {"file": overview_file}
+                inner = ["# {0}".format(overview["title"])]
+                if overview.get("lead"):
+                    inner.append(render_para({"text": overview["lead"], "lead": True}))
+                inner.extend(render_blocks(overview.get("blocks", []), ctx))
+                written.append(
+                    write_doc(
+                        docs_dir,
+                        overview_file,
+                        page_document(
+                            overview["title"],
+                            [wrap_page(inner, "l0-page--student")],
+                            "content/{0}".format(lesson["content"]),
+                        ),
+                    )
+                )
+
+            for index, page in enumerate(pages, start=1):
+                ctx = {"file": page["file"], "index": index, "total": total}
+                written.append(
+                    write_doc(
+                        docs_dir,
+                        page["file"],
+                        render_student_page(page, ctx, pages, index),
+                    )
+                )
+
+            teacher = load_yaml(lesson["teacher"])
+            ctx = {"file": teacher["file"]}
+            inner = ["# {0}".format(teacher["title"])]
+            if teacher.get("lead"):
+                inner.append(render_para({"text": teacher["lead"], "lead": True}))
+            inner.extend(render_blocks(teacher.get("blocks", []), ctx))
+            written.append(
+                write_doc(
+                    docs_dir,
+                    teacher["file"],
+                    page_document(
+                        teacher["title"],
+                        [wrap_page(inner, "l0-page--teacher")],
+                        "content/{0}".format(lesson["teacher"]),
+                    ),
+                )
             )
-        )
-
-    for index, page in enumerate(pages, start=1):
-        ctx = {"file": page["file"], "index": index, "total": total}
-        written.append(
-            write_doc(
-                docs_dir,
-                page["file"],
-                render_student_page(page, ctx, pages, index),
+            teacher_cards.append(
+                {
+                    "eyebrow": "{0} · {1}".format(course.get("label", ""), lesson.get("label", "")),
+                    "title": teacher["title"],
+                    "desc": lesson.get("teacher_desc", ""),
+                    "to": teacher["file"],
+                }
             )
-        )
 
-    # ---- 教师区 -----------------------------------------------------------
-    teacher = load_yaml("teacher.yaml")
-    ctx = {"file": teacher["file"]}
-    inner = ["# {0}".format(teacher["title"])]
-    if teacher.get("lead"):
-        inner.append(render_para({"text": teacher["lead"], "lead": True}))
-    inner.extend(render_blocks(teacher.get("blocks", []), ctx))
+    # ---- 教师区首页 -------------------------------------------------------
+    index_cfg = courses.get("teacher_index", {})
+    index_file = index_cfg.get("file", "teacher/index.md")
+    ctx = {"file": index_file}
+    inner = ["# {0}".format(index_cfg.get("title", "教师区"))]
+    if index_cfg.get("lead"):
+        inner.append(render_para({"text": index_cfg["lead"], "lead": True}))
+    inner.extend(render_blocks(index_cfg.get("blocks", []), ctx))
+    inner.extend(
+        render_blocks([dict(card, type="linkcard") for card in teacher_cards], ctx)
+    )
     written.append(
         write_doc(
             docs_dir,
-            teacher["file"],
+            index_file,
             page_document(
-                teacher["title"],
+                index_cfg.get("title", "教师区"),
                 [wrap_page(inner, "l0-page--teacher")],
-                "content/teacher.yaml",
+                "content/courses.yaml",
             ),
         )
     )
 
     return written
+
+
+def overview_file_of(pages: list[dict]) -> str:
+    """从页面路径推出概览页路径：jp/l1/page-1.md → jp/l1/index.md。"""
+    if not pages:
+        return "index.md"
+    parent = PurePosixPath(pages[0]["file"]).parent.as_posix()
+    return "{0}/index.md".format(parent) if parent != "." else "index.md"
 
 
 def render_pager(page: dict, pages: list[dict], index: int) -> str:
