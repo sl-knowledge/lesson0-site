@@ -3,6 +3,7 @@
 site_name: 日语课程 & 英语第一课
 site_description: 中文母语者学习语言的观察式试教站点：日语四课 + 英语第一课，学生讲义与教师支架。
 site_author: SL
+site_url: https://sl-knowledge.github.io/lesson0-site/
 copyright: © 2026 SL · 内容以 CC BY-NC-SA 4.0 授权
 
 docs_dir: docs
