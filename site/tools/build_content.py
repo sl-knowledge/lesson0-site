@@ -66,6 +66,11 @@ def inline(text: Any) -> str:
     return s
 
 
+def html_text(text: Any) -> str:
+    """行内格式化，并把原稿里的硬换行还原成 ``<br>``。"""
+    return inline(text).replace("\n", "<br>\n")
+
+
 def dest_dir(to_file: str) -> str:
     """源文件在 _site 中对应的目录（``use_directory_urls: true``）。
 
@@ -213,7 +218,7 @@ def render_note(block: dict, ctx: dict = None) -> str:
     if block.get("title"):
         out.append('<p class="l0-note__title">{0}</p>'.format(inline(block["title"])))
     if block.get("text"):
-        out.append('<p>{0}</p>'.format(inline(block["text"])))
+        out.append('<p>{0}</p>'.format(html_text(block["text"])))
     out.append("</div>")
     return "\n".join(out)
 
@@ -221,13 +226,13 @@ def render_note(block: dict, ctx: dict = None) -> str:
 def render_ask(block: dict, ctx: dict = None) -> str:
     """行内粗体标签 + 问题：原稿里「观察 3：……」的写法。"""
     return '<p class="l0-ask"><span class="l0-ask__label">{0}</span> {1}</p>'.format(
-        inline(block.get("label", "")), inline(block.get("text", ""))
+        inline(block.get("label", "")), html_text(block.get("text", ""))
     )
 
 
 def render_label(block: dict, ctx: dict = None) -> str:
     """小标题：一段内容的引导句，如「再观察：」。"""
-    return '<p class="l0-label">{0}</p>'.format(inline(block.get("text", "")))
+    return '<p class="l0-label">{0}</p>'.format(html_text(block.get("text", "")))
 
 
 def render_step(block: dict, ctx: dict = None) -> str:
@@ -241,7 +246,7 @@ def render_step(block: dict, ctx: dict = None) -> str:
 
 def render_hint(block: dict, ctx: dict = None) -> str:
     """灰色小字提示。"""
-    return '<p class="l0-hint">{0}</p>'.format(inline(block.get("text", "")))
+    return '<p class="l0-hint">{0}</p>'.format(html_text(block.get("text", "")))
 
 
 def render_admonition(block: dict, ctx: dict = None) -> str:
@@ -328,7 +333,7 @@ def render_pagehead(block: dict, ctx: dict = None) -> str:
 
 def render_para(block: dict, ctx: dict = None) -> str:
     cls = "l0-lead" if block.get("lead") else "l0-para"
-    return '<p class="{0}">{1}</p>'.format(cls, inline(block.get("text", "")))
+    return '<p class="{0}">{1}</p>'.format(cls, html_text(block.get("text", "")))
 
 
 def render_heading(block: dict, ctx: dict = None) -> str:

@@ -118,15 +118,14 @@ SPECS = [
         "course": "en",
         "course_label": "英语",
         "lesson_label": "英语第一课",
-        "title": "英语第一课 · 英语为什么非要「造」一个主语？",
-        "pager": "英语为什么非要「造」一个主语？",
+        "title": "英语第一课 · 按中文的方式写英语，会丢掉什么？",
+        "pager": "按中文的方式写英语，会丢掉什么？",
         "dir": "en/l1",
-        "source": "英语/英语第一课_轻松版_学生版.md",
-        "teacher_source": "英语/英语第一课_轻松版_教师版.md",
-        "teacher_title": "英语第一课 · 教师用：骨架规则、内部合理性与真心接受",
-        "pdf": "assets/downloads/lesson1-en-student-v1.pdf",
-        "pdf_label": "下载学生版 PDF（A4 · 3 页）",
-        "print_note": "第 3 页内容最密，浏览器打印会占两张 A4；分发请用这份 PDF。",
+        "source": "英语/英语第一课_v2_学生版.md",
+        "teacher_source": "英语/英语第一课_v2_教师版.md",
+        "teacher_title": "英语第一课 · 教师用：按中文的方式写英语，会丢掉什么？",
+        "pdf": "assets/downloads/lesson1-en-student-v2.pdf",
+        "pdf_label": "下载学生版 PDF（A4 · 4 页）",
     },
 ]
 
@@ -189,7 +188,13 @@ def parse_table(lines: list[str]) -> dict:
 
 def note_from_quote(quote: list[str]) -> dict:
     """引用块 → 提示框（首行若是加粗小标题则作为标题）。"""
-    text = " ".join(q for q in quote if q.strip())
+    parts = []
+    for line in quote:
+        if not line.strip():
+            parts.append("\n")
+        else:
+            parts.append(line + " ")
+    text = "".join(parts).strip()
     title = ""
     m = re.match(r"^\*\*(.+?)\*\*\s*(.*)$", text)
     if m:
@@ -373,15 +378,21 @@ def convert_blocks(lines: list[str], mode: str) -> list[dict]:
             i += 1
             continue
 
-        # 普通段落（可能跨行）
+        # 普通段落（可能跨行；行尾两个空格是原稿里的硬换行）
         para = []
         while i < len(lines) and not is_block_start(lines[i]):
-            para.append(lines[i].strip())
+            para.append(lines[i].rstrip())
             i += 1
         if not para:
             para = [s]
             i += 1
-        text = clean(" ".join(para))
+        parts = []
+        for line in para:
+            if line.endswith("  "):
+                parts.append(line.rstrip() + "\n")
+            else:
+                parts.append(line + " ")
+        text = clean("".join(parts))
         if text.endswith(("：", ":")) and len(text) <= 16 and mode == "student":
             blocks.append({"type": "label", "text": text})
         else:

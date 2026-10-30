@@ -1,10 +1,10 @@
 # 本文件由 tools/import_lessons.py 从 原始讲义 Markdown 自动生成，可手工修改。
 id: en-l1
 course: en
-title: 英语第一课 · 英语为什么非要「造」一个主语？
+title: 英语第一课 · 按中文的方式写英语，会丢掉什么？
 overview:
   title: 英语第一课 · 学生版 · 概览与用法
-  lead: 共 3 页，每页一个观察。这一课不背词条：先写下自己的想法，再翻到下一页核对。
+  lead: 共 4 页，每页一个观察。这一课不背词条：先写下自己的想法，再翻到下一页核对。
   blocks:
   - type: note
     title: 怎么用
@@ -12,81 +12,124 @@ overview:
   - type: pagelist
     items:
     - num: '1'
-      title: 先看四句中文
+      title: 先按你自己的方式写
       desc: ''
       to: en/l1/page-1.md
     - num: '2'
-      title: 一个游戏：用"骨架规则"说话
+      title: 当一回"英语听者"
       desc: ''
       to: en/l1/page-2.md
     - num: '3'
       title: 原来，英语就是这样说的！
       desc: ''
       to: en/l1/page-3.md
+    - num: '4'
+      title: 最后一个小问题
+      desc: ''
+      to: en/l1/page-4.md
   - type: download
     tone: amber
     title: 打印版
-    text: 同一份讲义另有可打印的 PDF（A4，3 页）。浏览器里直接打印也可以，页面已按讲义排版。作者 SL，内容以 CC BY-NC-SA 4.0 授权。第 3 页内容最密，浏览器打印会占两张
-      A4；分发请用这份 PDF。
-    to: assets/downloads/lesson1-en-student-v1.pdf
-    label: 下载学生版 PDF（A4 · 3 页）
+    text: 同一份讲义另有可打印的 PDF（A4，4 页）。浏览器里直接打印也可以，页面已按讲义排版。作者 SL，内容以 CC BY-NC-SA 4.0 授权。
+    to: assets/downloads/lesson1-en-student-v2.pdf
+    label: 下载学生版 PDF（A4 · 4 页）
   - type: hr
   - type: foot
-    text: 英语第一课 · 英语为什么非要「造」一个主语？ · 学生讲义 v1 · 中文母语者学习英语 · 作者 SL
+    text: 英语第一课 · 按中文的方式写英语，会丢掉什么？ · 学生讲义 v1 · 中文母语者学习英语 · 作者 SL
 pages:
 - file: en/l1/page-1.md
-  title: 先看四句中文
-  head: 英语第一课 · 先看四句中文
+  title: 先按你自己的方式写
+  head: 英语第一课 · 先按你自己的方式写
   blocks:
   - type: note
     tone: green
     title: ''
-    text: 今天不背单词，也不背语法。我们先从你每天都在说的中文开始，玩几个小小的观察游戏。 我们只想弄明白一件事：**英语的句子，是怎样搭起来的？**
+    text: "今天不背单词，也不背语法。先按你自己的方式写，再一起看看会发生什么。 \n我们只想弄明白一件事：**同一个意思，为什么英语要换一种写法？**"
   - type: hr
-  - type: para
-    text: ① **下雨了。** ② **大象鼻子长。** ③ **这本书我看过。** ④ **政府反应太慢，老百姓很生气。**
+  - type: note
+    tone: green
+    title: 可能用到的词
+    text: here = 这里　cold = 冷　government = 政府　react = 反应　slow / slowly = 慢　people = 人们　angry = 生气的　rain
+      = 下雨
   - type: question
     label: 小问题
     num: '1'
-    text: 哪一句里，根本找不到"做这件事的人或东西"？
-  - type: list
-    marker: checkbox
-    items:
-    - ①
-    - ②
-    - ③
-    - ④
+    text: 把下面三句话写成英语。写你觉得最自然的就行，不用担心对错。
+  - type: para
+    text: ① 这里很冷。 → [[blank]] ② 政府反应太慢，老百姓很生气。 → [[blank]] ③ 下雨了。 → [[blank]]
+  - type: hint
+    text: 先写下来，再往下看。
+  - type: step
+    label: 第 2 步
+    title: 两种语言，两套条件
+  - type: table
+    rows:
+    - - '**词**'
+      - 永远不变形
+      - 词上带"标签"：时间、单复数……
+    - - '**一句话怎么组织**'
+      - 像流水，一段一段往下说
+      - 像骨架，先定一个主语和一个主要动词
+    - - '**不需要的成分**'
+      - 可以不说
+      - 骨架上的位置必须填满
+    - - '**听的人靠什么**'
+      - 靠共同知道的背景，自己补上
+      - 靠句子里明明白白的信号
+    headers:
+    - ''
+    - 中文的条件
+    - 英语的条件
+  - type: para
+    text: 两套条件都是好办法。可是，**按一套条件写出来的句子，放到另一套条件下，会发生什么？**
+  - type: hr
+  pager: 先按你自己的方式写
+- file: en/l1/page-2.md
+  title: 当一回"英语听者"
+  head: 英语第一课 · 当一回"英语听者"
+  blocks:
+  - type: para
+    text: 想象一个只按英语条件理解句子的人。他听句子时，会先找主语和主要动词；骨架上的每个位置，他都等着被填上；他只靠句子里的信号，不靠"心照不宣"。
+  - type: para
+    text: 很多中文母语者会这样写（也看看你自己的写法）：
+  - type: para
+    text: '**A. Here is very cold.**'
+  - type: para
+    text: '**B. Government react too slow, people very angry.**'
   - type: question
     label: 小问题
     num: '2'
-    text: 第 ② 句先说"大象"，再说"鼻子长"。第 ③ 句先说"这本书"，再说"我看过"。这两句话开头的那个词，起的是什么作用？
+    text: 英语里 "Here is…" 通常用来递上或介绍一样东西，比如 "Here is your coffee"。英语听者听到 A，会以为接下来要出现什么？
   - type: write
-    label: 我的想法：
+    label: ''
     lines: 1
-  - type: hint
-    text: 提示：想一想，听的人听到第一个词时，知道了什么？
   - type: question
     label: 小问题
     num: '3'
-    text: 第 ④ 句可以切成几小段？每一小段有自己的"主角"吗？
-  - type: write
-    label: 我的想法：
-    lines: 1
-  - type: note
-    tone: green
-    title: 中文像一条流水
-    text: 先说出要谈的东西或背景，再一段一段往下说；用不着的成分，就不说。这是一个很好用的办法。
-  - type: hr
-  pager: 先看四句中文
-- file: en/l1/page-2.md
-  title: 一个游戏：用"骨架规则"说话
-  head: 英语第一课 · 一个游戏：用"骨架规则"说话
-  blocks:
+    text: 听完 B，英语听者能确定下面这些吗？
+  - type: table
+    rows:
+    - - 这是过去的事、现在的事，还是一直这样？
+      - '[ ]'
+      - '[ ]'
+    - - 说的是哪一个政府？
+      - '[ ]'
+      - '[ ]'
+    - - '"反应慢"和"很生气"是什么关系？'
+      - '[ ]'
+      - '[ ]'
+    headers:
+    - 问题
+    - 能
+    - 不能
   - type: para
-    text: 现在换一套规则，试着自己想办法。这不是考试，想不出来可以马上看提示。
+    text: 在中文里，没说的东西，听的人会自己补上。在英语里，**空着的位置不是"没说"：要么被听错，要么信息真的丢了。**
+  - type: step
+    label: 第 3 步
+    title: 按英语的条件重新说
   - type: note
     tone: green
-    title: 游戏规则只有三条
+    title: 骨架规则只有三条
     text: ''
   - type: list
     marker: ordered
@@ -97,45 +140,37 @@ pages:
   - type: question
     label: 小问题
     num: '4'
-    text: 用骨架规则说"下雨了"。主语的位置放什么？
+    text: '"这里很冷"和"下雨了"，都没有一个"东西"可以当主语。按规则 ③，主语的位置放什么？'
   - type: para
-    text: 主语 [[blank]]　　主要动词 [[blank]]
+    text: 主语 [[blank]]　　主要动词 [[blank]]　　其他 [[blank]]
   - type: hint
-    text: 提示：并没有"谁"在下雨……可是位置不能空。你可以自己造一个"占位的小记号"，比如 ○。
+    text: 提示：你可以自己造一个"占位的小记号"，比如 ○。
   - type: question
     label: 小问题
     num: '5'
-    text: 用骨架规则说"大象鼻子长"。只能有一个主语，你选谁？动词是什么？
-  - type: para
-    text: 主语 [[blank]]　　主要动词 [[blank]]　　其他 [[blank]]
-  - type: question
-    label: 小问题
-    num: '6'
     text: 只用一句话（一个主语、一个主要动词）说"政府反应太慢，老百姓很生气"。
   - type: para
     text: 主语 [[blank]]　　主要动词 [[blank]]　　其他 [[blank]]
   - type: hint
-    text: 提示：能不能把"政府反应太慢"这整件事，变成**一个东西**，放进主语的位置？
-  - type: para
-    text: 你刚才是在一套严格的规则下解决问题。看看你发明了什么：**一个占位的小记号**，还有**把一整件事装进一个大名词**的办法。
-  - type: para
-    text: 接下来看看：真的有一种语言是按这套规则说话的。
+    text: 提示：能不能把"政府反应太慢"这整件事变成**一个东西**，放进主语的位置？
   - type: hr
-  pager: 一个游戏：用"骨架规则"说话
+  pager: 当一回"英语听者"
 - file: en/l1/page-3.md
   title: 原来，英语就是这样说的！
   head: 英语第一课 · 原来，英语就是这样说的！
   blocks:
   - type: para
-    text: ① **It is raining.** 下雨了。（it 没有意思，只是用来占住主语的位置）
+    text: ① **It is cold here.** 这里很冷。（it 没有意思，只负责占住主语的位置）
   - type: para
-    text: ② **Elephants have long trunks.** 大象鼻子长。（主语：大象；动词：有）
+    text: ② **It is raining.** 下雨了。
   - type: para
-    text: ③ **The government's slow response angered the public.** 政府反应太慢，老百姓很生气。（主语："政府迟缓的反应"；动词：使……生气）
+    text: ③ **The government's slow response angered the public.** （主语："政府迟缓的反应"；动词：使……生气）
+  - type: para
+    text: ③' **People were angry because the government reacted too slowly.** （另一种说法：用 because 把关系说出来）
   - type: question
     label: 小问题
-    num: '7'
-    text: 把你的发明和英语对上号
+    num: '6'
+    text: 把你的发明和英语对上号，然后就不再用自己的记号了。
   - type: table
     rows:
     - - 占位的小记号：[[blank]]
@@ -145,66 +180,61 @@ pages:
     headers:
     - 我自己发明的
     - 英语里真正的说法（亲手抄写）
-  - type: hint
-    text: 对上号以后，就不再用自己的记号了。从下一题起，只用英语。
+  - type: question
+    label: 小问题
+    num: '7'
+    text: 回到第 2 页的小问题 3。英语的这些写法，分别把哪样东西"找回来"了？
+  - type: para
+    text: were（过去的事）→ 找回了 [[blank]] because → 找回了 [[blank]] the government → 找回了 [[blank]]
   - type: note
     tone: green
     title: 这就是英语。
-    text: 英语的句子先搭骨架：一个主语加一个主要动词，骨架上的位置必须填满。所以它会"造"一个 it，也会把一整件事压成一个大名词，放进主语的位置。这不是怪规矩，而是在这套规则下的好办法，你刚才自己也是这么做的。这只是我们今天的初步发现，英语还有更多细节，以后慢慢发现。
+    text: 在"骨架必须填满、听的人只靠信号"的条件下，英语长成了这个样子：用 it 占位，用词上的标签说清时间，用 because 说清关系，用一个大名词装下整件事。按中文的样子写也不是不行，但会丢掉这些东西。这是我们今天的初步发现，英语还有更多细节，以后慢慢发现。
   - type: step
-    label: 第 2 步
-    title: 换个角度想一想
+    label: 第 4 步
+    title: 照一照镜子
   - type: ask
     label: 小问题 8
-    text: 有人把第 ③ 句直译成中文："政府的迟缓的反应使老百姓生气了。"你听着感觉怎么样？为什么？
+    text: 有人把 ③ 直译成中文："政府的迟缓的反应使老百姓生气了。"你听着怎么样？按英语的样子写中文，中文丢掉了什么？
   - type: write
     label: ''
     lines: 1
   - type: hint
-    text: 提示：再想想，同一个形式，在中文的规则下和在英语的规则下，是不是都算好办法？
+    text: 提示：想想，中文原来那句"政府反应太慢，老百姓很生气"，好在哪里？
   - type: step
-    label: 第 3 步
+    label: 第 5 步
     title: 你来试试
   - type: note
     tone: green
     title: 新词
-    text: cold = 冷　here = 这里　dark = 黑　is getting = 正在变得
+    text: quiet = 安静　dark = 黑　is getting = 正在变得　sick = 生病的　didn't come to school = 没来上学　because = 因为
   - type: para
-    text: '"这里很冷。" → [[blank]]'
-  - type: label
-    text: 我的把握：
-  - type: list
-    marker: checkbox
-    items:
-    - 高
-    - 中
-    - 低
+    text: '"这里很安静。" → [[blank]]　把握：[ ] 高　[ ] 中　[ ] 低'
   - type: para
-    text: '"天黑了。" → [[blank]]'
-  - type: label
-    text: 我的把握：
-  - type: list
-    marker: checkbox
-    items:
-    - 高
-    - 中
-    - 低
+    text: '"天黑了。" → [[blank]]　把握：[ ] 高　[ ] 中　[ ] 低'
+  - type: para
+    text: '"他病了，没来上学。" → [[blank]]　把握：[ ] 高　[ ] 中　[ ] 低'
   - type: label
     text: ★ 挑战（选做）
   - type: list
     marker: ordered
     items:
-    - 今天你是用什么办法发现英语规则的？用一句话写下来。
-    - 新词：lateness =（某人）迟到（名词），upset = 使……不高兴。只用一个主语，说出"他迟到了，老师很不高兴"。
-  - type: question
-    label: 最后一个小问题
+    - 今天你是用什么办法弄明白英语为什么这样写的？用一句话写下来。
+    - 找一句你以前写过、或者常听人说的"中文式英语"。当一回英语听者：它丢掉了什么？
+  - type: hr
+  pager: 原来，英语就是这样说的！
+- file: en/l1/page-4.md
+  title: 最后一个小问题
+  head: 英语第一课 · 最后一个小问题
+  blocks:
+  - type: label
     text: 学完以后，你还好奇什么？
   - type: write
     label: ''
     lines: 1
   - type: hint
-    text: 想不到也没关系。比如可以问："英语里还有哪些位置必须填满？""英语为什么一定要分 he 和 she？"
+    text: 想不到也没关系。比如可以问："英语为什么一定要分 he 和 she？""单复数是不是也为了不让听的人弄错？"
   - type: hr
   - type: para
-    text: '**今天不必记住很多英语。** 你真正学到的是：**每种语言都在自己的规则下找到了好办法。觉得别扭的时候，先问一句：在它的规则下，这是不是一个好办法？**'
-  pager: 原来，英语就是这样说的！
+    text: 按中文的样子写英语，英语会丢东西；按英语的样子写中文，中文也会丢东西。**每种语言都在自己的条件下长成了最合适的样子。觉得别扭的时候，先问一句：在它的条件下，这样写保住了什么？**
+  pager: 最后一个小问题

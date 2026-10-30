@@ -38,8 +38,8 @@ blocks:
     text: 从中文出发，看英语的句子是怎么搭起来的：不背单词，先看清骨架。
   - type: linkcard
     eyebrow: 英语 · 第一课
-    title: 英语为什么非要「造」一个主语？
-    desc: 3 页学生讲义 · 用骨架规则造句，并判断一条规则是不是「你真的接受」
+    title: 按中文的方式写英语，会丢掉什么？
+    desc: 4 页学生讲义 · 先按自己的方式写，再当一回「英语听者」
     to: en/l1/index.md
 
   - type: heading

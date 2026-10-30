@@ -895,6 +895,14 @@ input {
     display: none !important;
   }
 
+  /* 「这篇有帮助吗？」反馈表单在打印时会多顶出一张空白页 */
+  .md-feedback,
+  .md-source-file,
+  .md-clipboard,
+  .md-annotation {
+    display: none !important;
+  }
+
   .md-grid {
     display: block;
   }
@@ -1083,36 +1091,36 @@ input {
 
   /* 学生页再压一档：保证每个学生页正好印在一张 A4 上 */
   .l0-page--student {
-    line-height: 1.5;
+    line-height: 1.45;
   }
 
   .l0-page--student h1 {
-    font-size: 1.42rem;
-    margin: 0 0 0.35rem;
+    font-size: 1.32rem;
+    margin: 0 0 0.3rem;
   }
 
   .l0-page--student .l0-lead {
     font-size: 0.98rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.45rem;
   }
 
   .l0-page--student .l0-para {
-    margin-bottom: 0.3rem;
-    line-height: 1.5;
+    margin-bottom: 0.2rem;
+    line-height: 1.45;
   }
 
   .l0-page--student .l0-label {
     font-size: 0.95rem;
-    margin: 0.5rem 0 0.05rem;
+    margin: 0.3rem 0 0.05rem;
   }
 
   .l0-page--student .l0-ask {
-    margin: 0.45rem 0 0.1rem;
-    line-height: 1.55;
+    margin: 0.3rem 0 0.1rem;
+    line-height: 1.5;
   }
 
   .l0-page--student .l0-step {
-    margin: 0.6rem 0 0.1rem;
+    margin: 0.4rem 0 0.1rem;
   }
 
   .l0-page--student .l0-step__title {
@@ -1120,12 +1128,12 @@ input {
   }
 
   .l0-page--student .l0-q {
-    margin: 0.5rem 0 0.05rem;
+    margin: 0.4rem 0 0.05rem;
   }
 
   .l0-page--student .l0-q__text {
     font-size: 0.96rem;
-    line-height: 1.5;
+    line-height: 1.45;
   }
 
   .l0-page--student .l0-badge {
@@ -1134,18 +1142,23 @@ input {
   }
 
   .l0-page--student .l0-note {
-    margin: 0.5rem 0;
-    padding: 0.45rem 0.7rem;
-    line-height: 1.5;
+    margin: 0.35rem 0;
+    padding: 0.3rem 0.7rem;
+    line-height: 1.45;
   }
 
   .l0-page--student .l0-hint {
     font-size: 0.84rem;
-    margin: 0 0 0.35rem;
+    margin: 0 0 0.2rem;
+  }
+
+  .l0-page--student .l0-pagehead {
+    padding-bottom: 0.35rem;
+    margin-bottom: 0.6rem;
   }
 
   .l0-page--student .l0-list {
-    margin: 0.3rem 0 0.45rem;
+    margin: 0.2rem 0 0.35rem;
   }
 
   .l0-page--student .l0-list li {
@@ -1163,7 +1176,7 @@ input {
 
   .l0-page--student .l0-table th,
   .l0-page--student .l0-table td {
-    padding: 0.28rem 0.5rem;
+    padding: 0.24rem 0.5rem;
     line-height: 1.45;
   }
 
@@ -1181,6 +1194,6 @@ input {
 
   @page {
     size: A4;
-    margin: 12mm 12mm;
+    margin: 9mm 10mm;
   }
 }
